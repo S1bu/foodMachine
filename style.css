@@ -1,0 +1,223 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+}
+.nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+}
+.nav
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav
+a:hover{
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+}
+.main{
+    margin-top: 50px;
+}
+
+.output,.searched ,.displayWish{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+
+.cart ,
+.display{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+
+.card ,.card_cart{
+    width: 260px;
+    border: 1px solid gray;
+    margin: 2px;
+    border-radius: 10px;
+}
+.buttonwish{
+    border: 1px solid rgba(30, 143, 255, 0.733);
+    background-color: rgba(30, 143, 255, 0.733);
+    color:white;
+    width:80%;
+    padding: 10px;
+}
+.button{
+    border: 1px solid rgba(0, 128, 0, 0.514);
+    background-color: rgba(1, 46, 1, 0.514);
+    color:white;
+    width:80%;
+    padding: 10px;
+}
+.wishbtn{
+    padding: 10px;
+    border: none;
+}
+ 
+.clearButton{
+    border: 1px solid rgba(128, 0, 128, 0.587);
+    background-color: rgba(128, 0, 128, 0.587);
+    color:white;
+    width:10%;
+    padding: 10px;
+}
+.buttonRemove{
+    border: 1px solid rgba(255, 0, 0, 0.658);
+    background-color: rgba(255, 0, 0, 0.658);
+    color:white;
+    width:80%;
+    padding: 10px;
+}
+
+
+.searchbar{
+    padding: 10px;
+    width: 50%;
+}
+.searchbtn{
+    padding: 10px;
+}
+
+.error{
+    color: red;
+}
+
+.card-image img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.menubtn{
+    padding: 10px;
+}
+
+.purchase{
+    background-color: darkslategray;
+}
+
+ 
+
+@media (max-width: 600px){
+    .output,.searched ,.displayWish{
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+}
+
+
+.singleproduct{
+    position: fixed;
+    width: 80%;
+    height: 90vh;
+    background-color: white;
+    top: 6%;
+    left: 10%;
+    right: 10%;
+    z-index: 1;
+}
+
+.singleproduct > .nav{
+    width: 10%;
+    float: right;
+    margin-top: 1%;
+}
+
+.cover{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    top: 0;
+    left: 0;
+}
+
+/* column */
+.singleproduct > .content > .row .col{
+text-align: center;
+width: 45%;
+background-color: white;
+}
+
+/* image */
+.singleproduct > .content > .row .col img{
+    width: 50%;
+}
+/* row */
+.singleproduct > .content > .row{
+    margin-top: 1%;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.singleproduct > .content > .row .col button{
+    margin: 5px;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 100%;
+    /* background-color:; */
+}
+
+
+/* ---------------------------- */
+.rowSinglePrd{
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgba(0, 0, 0, 0.699);
+    margin: 5% 10%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.right , .left{
+    text-align: center;
+    width: 90%;
+
+ }
+
+ .rowSinglePrd button{
+    background-color:rgba(0, 128, 0, 0.514) ;
+    border: none;
+    padding: 10px 20px;
+    width: 40%;
+    color: white;
+ }
+
+
+.right{
+    margin-top: 20%;
+}
+.cart_btn_holder{
+    margin-top: 10%;
+}
+.cart_add{
+    width: 70%;
+}
+
+.view{
+    width: 90%;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 2px;
+}
