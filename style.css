@@ -39,6 +39,8 @@ a:hover{
 border-top: 1px solid black;
 border-bottom: 1px solid black;
 }
+/* search bar */
+ 
 /* ----------banner---------- */
 #banner{
     margin-top: 1%;
@@ -70,6 +72,15 @@ width: 50%;
 animation: bounce infinite;
 animation-duration:10s;
 
+}
+
+
+/* search */
+.search button{
+    background-color: var(---secondary);
+    color: white;
+    font-weight: 800;
+    border: none;
 }
 /* ----------ABOUT US---------- */
 #about{
@@ -126,9 +137,10 @@ animation-duration:10s;
     padding: 10px;
 }
 .button{
-    border:var(---background_color)  1px solid;
-    background-color:var(---background_color);
-    color:white;
+   background-color: white;
+
+   border: none;
+    color:var(---secondary);
     width:80%;
     padding: 10px;
 }
@@ -289,4 +301,19 @@ background-color: white;
     border: none;
     padding: 2px;
     margin: 2px;
+}
+
+
+.wish-holder{
+    float: right;
+    margin: 3px;
+}
+
+
+.view{
+    padding: 10px;
+}
+
+.card .row{
+    margin-top: 4%;
 }

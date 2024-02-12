@@ -62,14 +62,19 @@ wish_length.innerHTML = wishlist.length
 list.forEach((element, index) => {
     display.innerHTML += `
     <div class="card">
-    <center><h4>${element.name}</h4><span class="price">R ${element.price}</span></center>
+    <div class="wish-holder">
+    <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart-fill"></i></button>
+    </div>
+    <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
     <div class="card-image">
     <img src="${element.image}">
     </div>
     <center>
-        <button class="button" onclick="add_to_cart(${index})">Add <i class="bi bi-bag-plus"></i></button>
-        <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart-fill"></i></button>
-        <a href="../html/singleProd.html"><button onclick="singleProd(${index})" class="view">View</button></a>
+    <div class='row'>
+    <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+    <div class='col'><a href="../html/singleProd.html"><button onclick="singleProd(${index})" class="view">View</button></a></div>
+    <div>
+    
     </center>
     <br>
 </div>
