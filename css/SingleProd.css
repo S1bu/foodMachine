@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    ---background_color: rgb(255, 149, 0);
+    ---secondary:black;
+    ---font-family: Georgia, 'Times New Roman', Times, serif
+
+}
+body{
+    background-color:var(---secondary);
+}
+
+.rowSinglePrd{
+    background-color: var(---background_color);
+    width: 80%;
+    margin: 10%;
+}
+
+
+/* column */
+.singleproduct > .content > .row .col{
+    text-align: center;
+    width: 45%;
+    background-color: white;
+    }
+    
+    /* image */
+    .singleproduct > .content > .row .col img{
+        width: 50%;
+    }
+    /* row */
+    .singleproduct > .content > .row{
+        margin-top: 1%;
+        display:flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    
+    .singleproduct > .content > .row .col button{
+        margin: 5px;
+        padding: 20px 25px;
+        border: none;
+        border-radius: 100%;
+        /* background-color:; */
+    }
+    

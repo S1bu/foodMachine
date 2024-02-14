@@ -52,6 +52,7 @@ border-bottom: 1px solid black;
 }
 #banner .col h3{
     margin-top: 20%;
+    font-weight: 900;
     /* font-family:; */
 }
 #banner .col p{
@@ -81,6 +82,18 @@ animation-duration:10s;
     color: white;
     font-weight: 800;
     border: none;
+    border: var(---secondary) 1px dotted;
+    /* border-radius: 5px; */
+}
+
+.search input{
+    background-color: var(---secondary);
+    color: white;
+    border: var(---secondary) 1px solid;
+    /* border-radius: 5px; */
+}
+.search input::placeholder{
+    color: white;
 }
 /* ----------ABOUT US---------- */
 #about{
@@ -98,27 +111,37 @@ animation-duration:10s;
 #about img{
     width: 50%;
 }
+ 
+#about h3{
+    font-weight: 900;
+    padding: 5% 0;
+}
+
+
+/* --------------main section------------------ */
 .main{
     background-color: white;
     margin-top: 50px;
 }
 .output{
     z-index: 0;
+  
 }
 .output .card{
-    width: 80%;
+    width: 350px;
 }
 .output,.searched ,.displayWish{
     text-align: center;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
+    grid-template-columns: auto auto auto ;
+    justify-content: space-around;
+    /* justify-content: center; */
 }
 
 .cart ,
 .display{
     text-align: center;
-    display: grid;
+    /* display: grid;id */
     grid-template-columns: auto auto auto auto;
     justify-content: center;
 }
@@ -147,8 +170,19 @@ animation-duration:10s;
 .wishbtn{
     padding: 10px;
     border: none;
+    background-color: white;
+    float: right;
 }
  
+
+
+
+
+
+
+
+
+
 .clearButton{
     border: 1px solid rgba(128, 0, 128, 0.587);
     background-color: rgba(128, 0, 128, 0.587);
@@ -193,12 +227,6 @@ animation-duration:10s;
 
  
 
-@media (max-width: 600px){
-    .output,.searched ,.displayWish{
-        grid-template-columns: auto auto;
-        justify-content: center;
-    }
-}
 
 
 .singleproduct{
@@ -225,33 +253,6 @@ animation-duration:10s;
     background-color: rgba(0, 0, 0, 0.92);
     top: 0;
     left: 0;
-}
-
-/* column */
-.singleproduct > .content > .row .col{
-text-align: center;
-width: 45%;
-background-color: white;
-}
-
-/* image */
-.singleproduct > .content > .row .col img{
-    width: 50%;
-}
-/* row */
-.singleproduct > .content > .row{
-    margin-top: 1%;
-    display:flex;
-    flex-direction: row;
-    justify-content:space-around;
-}
-
-.singleproduct > .content > .row .col button{
-    margin: 5px;
-    padding: 20px 25px;
-    border: none;
-    border-radius: 100%;
-    /* background-color:; */
 }
 
 
@@ -296,8 +297,8 @@ background-color: white;
 
 .view{
     width: 90%;
-    background-color: var(---secondary);
-    color: white;
+    background-color: white;
+    color:var(---secondary);
     border: none;
     padding: 2px;
     margin: 2px;
@@ -316,4 +317,12 @@ background-color: white;
 
 .card .row{
     margin-top: 4%;
+}
+
+
+@media (max-width: 600px){
+    .output,.searched ,.displayWish{
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
 }

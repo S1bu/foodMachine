@@ -63,7 +63,7 @@ list.forEach((element, index) => {
     display.innerHTML += `
     <div class="card">
     <div class="wish-holder">
-    <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart-fill"></i></button>
+    <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
     </div>
     <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
     <div class="card-image">
@@ -72,7 +72,7 @@ list.forEach((element, index) => {
     <center>
     <div class='row'>
     <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-    <div class='col'><a href="../html/singleProd.html"><button onclick="singleProd(${index})" class="view">View</button></a></div>
+    <div class='col'><a href="../html/singleProd.html"><button onclick="singleProd(${index})" class="view"><i class="bi bi-arrow-right"></i></button></a></div>
     <div>
     
     </center>
@@ -146,7 +146,6 @@ function search_add_wishlist(index){
         localStorage.setItem("wishlist",JSON.stringify(wishlist))
 
         // cart length display
-        // cart_length.innerHTML = cart.length 
         wish_length.innerHTML = wishlist.length
 }
 //SEARCH FUNCTIONALITY
@@ -202,29 +201,4 @@ function add_to_wishlist(index){
     wish_length.innerHTML = wishlist.length
 
 }
-//--------------------------------
-// Still need to work on this -->
-// does not replace the original displayer
-//--------------------------------
 
-// function filterDrink(){
-//     let filter =  list.filter(item => item.category == 'drink')
-//   console.log(filter);
-  
-//     filter.forEach((element , index) => {
-//       display.innerHTML+=`
-//       <div class="card">
-//       <center><h4>${element.name}</h4><span class="price">R ${element.price}</span></center>
-//       <div class="card-image">
-//       <img src="${element.image}">
-//       </div>
-//       <center>
-//           <button class="button" onclick="add_to_cart(${index})">Add <i class="bi bi-bag-plus"></i></button>
-//           <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart-fill"></i></button>
-//       </center>
-//       <br>
-//   </div>
-//       `
-//     })
-// }
-//--------------------------------
