@@ -2,13 +2,9 @@ let single_product = JSON.parse(localStorage.getItem('single_product'));
 let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 
 
-single_product.forEach(element => {
-    document.querySelector('.left').innerHTML+=
-`
-        <h2>${element.name}</h2>
-       <img src="${element.image}" alt="" width="200px">
-`
-});
+let SinglepProductDisplay = document.querySelector('.SinglepProductDisplay')
+
+
 
 
 let quantity = 1
