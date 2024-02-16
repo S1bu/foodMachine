@@ -479,3 +479,13 @@ animation-duration:10s;
     background-color: white;
     border: none;
 }
+
+
+.cart_length,.wish_length{
+    background-color: var(---secondary);
+    border-radius:20px ;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    
+}

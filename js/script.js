@@ -40,7 +40,8 @@ const list = [
 let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localStorage.getItem('wishlist')) : [];
 let single_product = [];
-let single_product_info = JSON.parse(localStorage.getItem('single_product')) ? JSON.parse(localStorage.getItem('single_product')) : [];
+let filteredItems =[]
+// let single_product_info = JSON.parse(localStorage.getItem('single_product')) ? JSON.parse(localStorage.getItem('single_product')) : [];
 
 // DOCUMENT OBJECT MODEL
 let display = document.querySelector('.output')
@@ -91,7 +92,42 @@ function clearSingleProd(){
     location.reload()
 }
 
- function singleProd(index){
+function singleProdSearch(index){
+    single_product.push(
+        {
+            id: filteredItems[index].id,
+            name: filteredItems[index].name, 
+            price: filteredItems[index].price,
+            image:filteredItems[index].image,
+            description:filteredItems[index].description
+        }
+       
+        );
+ 
+      
+        single_product.forEach(element => {
+            SinglepProductDisplay.innerHTML+=
+        `
+        <div class="row modal-row">
+        <center>
+        <h3>${element.name}</h3>
+        </center>
+        </div>
+    
+        <br>
+        <br>
+        <div class="col text-center">
+        <img src="${element.image}" alt="">
+        </div>
+       
+       
+        <p><b>Price :</b></b>${element.price}</p>
+        <p><b>Description: </b>${element.description}</p>
+      
+        `
+        })
+}
+function singleProd(index){
     single_product.push(
         {
             id: list[index].id,
@@ -124,31 +160,36 @@ function clearSingleProd(){
       
         `
         })
+
+     
 }
  
 
 
 
 //ADD TO CART
-function add_to_cart(index){
+ 
+function add_to_cart(index) {
+  let id_target = list[index].id;
 
- console.log(list[index].id)
+  if (cart.some(item => item.id === id_target)) {
+    console.log('Already in');
+// alert('Already have this item');
+  } else {
+    cart.push({
+      id: list[index].id,
+      name: list[index].name, 
+      price: list[index].price,
+      image: list[index].image
+    });
+    
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-    cart.push(
-        {
-            id: list[index].id,
-            name: list[index].name, 
-            price: list[index].price,
-            image:list[index].image
-        }
-       
-        )
-//    }
-
-localStorage.setItem("cart",JSON.stringify(cart))
-// cart length display
-cart_length.innerHTML = cart.length
+    // Update cart length display
+    cart_length.innerHTML = cart.length;
+  }
 }
+
 function search_add_to_cart(index){
     let filteredItemlist = JSON.parse(localStorage.getItem('filteredItem')) ? JSON.parse(localStorage.getItem('filteredItem')) : [];
 // console.log(filteredItemlist[index].name)
@@ -192,7 +233,7 @@ searched.innerHTML=`
     }else{
         searched.innerHTML = '';
         // Filter items based on the search input
-        const filteredItems = list.filter(item => item.name.toLowerCase().includes(searchInput));
+         filteredItems = list.filter(item => item.name.toLowerCase().includes(searchInput));
        
         filteredItems.forEach((item, index) => {
             searched.innerHTML+=`
@@ -212,10 +253,10 @@ searched.innerHTML=`
                           <p>R ${item.price}</p>
                     </div>
                     <div class="col">
-                        <button><i class="bi bi-bag"></i></button>
+                        <button onclick="search_add_to_cart(${index})"><i class="bi bi-bag"></i></button>
                         <br>
                         <br>
-                        <button><i class="bi bi-arrow-right"></i></button></button>
+                        <button onclick="singleProdSearch(${index})" class="view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-right"></i></button></button>
                     </div>
                 </div>
             </div>
