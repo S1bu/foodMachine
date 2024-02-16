@@ -111,17 +111,17 @@ function clearSingleProd(){
         <h3>${element.name}</h3>
         </center>
         </div>
-        <hr>
+    
         <br>
         <br>
         <div class="col text-center">
         <img src="${element.image}" alt="">
         </div>
-        <div class="col ">
+       
        
         <p><b>Price :</b></b>${element.price}</p>
         <p><b>Description: </b>${element.description}</p>
-        </div>
+      
         `
         })
 }

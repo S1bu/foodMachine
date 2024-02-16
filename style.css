@@ -87,11 +87,14 @@ animation-duration:10s;
     font-weight: 800;
     border: none;
     border: var(---secondary) 1px dotted;
+    border-radius: 10px;
 
 }
 
 .search input{
     color: black;
+    border: 1px solid gray;
+    border-radius: 10px;
    
 }
 .search input::placeholder{
