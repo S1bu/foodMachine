@@ -66,7 +66,7 @@ wish_length.innerHTML = wishlist.length
         //DISPLAY OF PRODUCTS
 list.forEach((element, index) => {
     display.innerHTML += `
-    <div class="card">
+    <div class="card" class="container-fluid row" data-aos="fade-up">
     <div class="wish-holder">
     <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
     </div>
@@ -238,7 +238,7 @@ searched.innerHTML=`
         filteredItems.forEach((item, index) => {
             searched.innerHTML+=`
 
-            <div class="card">
+            <div class="card" class="container-fluid row" data-aos="fade-up">
                 <div class="heart-holder" style="float:right;">
                     <i class="bi bi-heart" style="float: right;margin-right: 2%;"></i>
                 </div>
