@@ -125,7 +125,7 @@ function clearSingleProd(){
         `
         })
 }
-//  
+ 
 
 
 
@@ -196,16 +196,28 @@ searched.innerHTML=`
        
         filteredItems.forEach((item, index) => {
             searched.innerHTML+=`
+
             <div class="card">
-            <center><h4>${item.name}</h4><span class="price">R ${item.price}</span></center>
-            <div class="card-image">
-            <img src="${item.image}">
-            </div>
-            <center>
-            <button class="button"  onclick="search_add_to_cart(${index})">Add <i class="bi bi-bag-plus"></i></button>
-            <button class="wishbtn" onclick="search_add_wishlist(${index})" ><i class="bi bi-heart"></i></button>
-            </center>
-            <br>
+                <div class="heart-holder" style="float:right;">
+                    <i class="bi bi-heart" style="float: right;margin-right: 2%;"></i>
+                </div>
+                
+                <div class="row">
+
+                    <div class="col">
+                        <img src="${item.image}" alt="">
+                    </div>
+                    <div class="col">
+                          <p><b>${item.name}</b></p>
+                          <p>R ${item.price}</p>
+                    </div>
+                    <div class="col">
+                        <button><i class="bi bi-bag"></i></button>
+                        <br>
+                        <br>
+                        <button><i class="bi bi-arrow-right"></i></button></button>
+                    </div>
+                </div>
             </div>
             `
  
