@@ -77,23 +77,25 @@ animation-duration:10s;
 
 
 /* search */
+.search{
+    text-align: center;
+    margin-top: 1%;
+}
 .search button{
     background-color: var(---secondary);
     color: white;
     font-weight: 800;
     border: none;
     border: var(---secondary) 1px dotted;
-    /* border-radius: 5px; */
+
 }
 
 .search input{
-    background-color: var(---secondary);
-    color: white;
-    border: var(---secondary) 1px solid;
-    /* border-radius: 5px; */
+    color: black;
+   
 }
 .search input::placeholder{
-    color: white;
+    color: gray;
 }
 /* ----------ABOUT US---------- */
 #about{
