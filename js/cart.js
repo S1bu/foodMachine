@@ -58,13 +58,7 @@ function add_to_wishlist(index){
     wish_length.innerHTML = wishlist.length
 
 }
-function Remove(index) {
-   let position = cart[index].id
-   let target = cart.findIndex(obj => obj.id === position)
-    cart.splice(target,1)
-    localStorage.setItem("cart",JSON.stringify(cart))
-    location.reload();
-}
+
 function total(){
 
     let cartTotal = cart.reduce((accumulator, cart) => {

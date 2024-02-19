@@ -48,6 +48,7 @@ let display = document.querySelector('.output')
 let heading = document.querySelector('.heading')
 let cart_display = document.querySelector('.cart_display')
 let cart_length = document.querySelector('.cart_length')
+let cart_length_2 = document.querySelector('.cart_length_2')
 let wish_length = document.querySelector('.wish_length')
 let searched = document.querySelector('.searched')
 //------------ ------- --------- ----------
@@ -60,9 +61,43 @@ let SinglepProductDisplay = document.querySelector('.SinglepProductDisplay')
 let filter;
 // LIST LENGTHS
 cart_length.innerHTML = cart.length
+cart_length_2.innerHTML = cart.length
 wish_length.innerHTML = wishlist.length
  
-
+//Cart stuff
+cart.forEach((element,index )=> {
+    document.querySelector('.cart_output').innerHTML+=
+    `
+    <div class="card" style="width: 100%;">
+    <div class="row">
+      <div class="del_holder">
+        <button  style="float: right; margin-right: 10px;background-color:white;border:none;" onclick='Remove(${index})' ><i class="bi bi-trash3"></i></button>
+      </div>
+    </div>
+   <div class="row">
+    <div class="col">
+      <img src="${element.image}" width="40%" alt="">
+    </div>
+    <div class="col">
+      <p>${element.name}</p>
+    </div>
+    <div class="col">
+      <label for="quantity" style="color: rgb(255, 149, 0) ;">Quantity</label>
+      <input type="number" name="quantity" style="width: 50%;" min="1">
+    </div>
+   </div> 
+  </div>
+    `
+});
+function Remove(index) {
+    let position = cart[index].id
+    let target = cart.findIndex(obj => obj.id === position)
+     cart.splice(target,1)
+     localStorage.setItem("cart",JSON.stringify(cart))
+     location.reload();
+ }
+//--------------
+//---------------
         //DISPLAY OF PRODUCTS
 list.forEach((element, index) => {
     display.innerHTML += `
@@ -155,7 +190,7 @@ function singleProd(index){
         </div>
        
        
-        <p><b>Price :</b></b>${element.price}</p>
+        <p><b>Price :</b> R ${element.price}</p>
         <p><b>Description: </b>${element.description}</p>
       
         `
@@ -174,7 +209,6 @@ function add_to_cart(index) {
 
   if (cart.some(item => item.id === id_target)) {
     console.log('Already in');
-// alert('Already have this item');
   } else {
     cart.push({
       id: list[index].id,
@@ -288,3 +322,5 @@ function add_to_wishlist(index){
 
 
 document.querySelector('.btn-close').addEventListener('click',clearSingleProd)
+
+
