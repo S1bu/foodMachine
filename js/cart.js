@@ -60,7 +60,6 @@ function add_to_wishlist(index){
 }
 
 function total(){
-
     let cartTotal = cart.reduce((accumulator, cart) => {
       let price = parseFloat(cart.price);
       return accumulator + price;

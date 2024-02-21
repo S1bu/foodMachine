@@ -25,9 +25,9 @@
     <header>
         <div class="nav">
             <a href="./index.html">Home  </a>
-            <a href="#about">About</a>
+            <a href="#about">About</a> 
             <a href="./html/cart.html"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Cart <i class="bi bi-bag"></i> <span class="cart_length"></span></a>
-            <a href="./html/wish.html">Wishlist <i class="bi bi-bag-heart"></i> <span class="wish_length"></span></a>
+            <a href="./html/wish.html" data-bs-toggle="offcanvas" data-bs-target="#wishlist" aria-controls="offcanvasScrolling">Wishlist <i class="bi bi-bag-heart"></i> <span class="wish_length"></span></a>
            
         </div>
     </header>
@@ -107,10 +107,25 @@
     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Cart <i class="bi bi-bag"></i> <span class="cart_length_2"></span></h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
+  <center>
+    <p>Total :R <span class="TotalDisplay"></span></span></p> </p>
+  </center>
   <div class="offcanvas-body";">
     <div class="cart_output">
    
     </div>
+  </div>
+</div>
+<!-- wishlist -->
+ 
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="wishlist" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Wish List</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- <p>Try scrolling the rest of the page to see this option in action.</p> -->
   </div>
 </div>
 </div>

@@ -489,3 +489,8 @@ animation-duration:10s;
     font-size: 10px;
     
 }
+
+.cart .card button{
+    background-color: white;
+    border:1px solid gray ;
+}
