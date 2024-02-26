@@ -60,6 +60,7 @@ let Specials = document.querySelector('.special')
 let SinglepProductDisplay = document.querySelector('.SinglepProductDisplay')
 let filter;
 // LIST LENGTHS
+
 cart_length.innerHTML = cart.length
 cart_length_2.innerHTML = cart.length
 wish_length.innerHTML = wishlist.length
@@ -67,46 +68,53 @@ wish_length.innerHTML = wishlist.length
 
 
 //Cart stuff
-cart.forEach((element,index )=> {
-    document.querySelector('.cart_output').innerHTML+=
-    `
-    <div class="card" style="width: 100%;">
-    <div class="row">
-      <div class="del_holder">
-        <button  style="float: right; margin-right: 10px;background-color:white;border:none;" onclick='Remove(${index})' ><i class="bi bi-trash3"></i></button>
+function cartItems(){ 
+    cart.forEach((element,index )=> {
+        document.querySelector('.cart_output').innerHTML+=
+        `
+        <div class="card" style="width: 100%;">
+        <div class="row">
+          <div class="del_holder">
+            <button  style="float: right; margin-right: 10px;background-color:white;border:none;" onclick='Remove(${index})' ><i class="bi bi-trash3"></i></button>
+          </div>
+        </div>
+        
+       <div class="row">
+        <div class="col">
+          <img src="${element.image}" width="40%" alt="">
+        </div>
+        <div class="col">
+          <p>${element.name}</p>
+        </div>
+        <div class="col">
+        ${element.price}
+      <div class="col quantityDisplay">
+        x ${element.quantity}
       </div>
-    </div>
-    
-   <div class="row">
-    <div class="col">
-      <img src="${element.image}" width="40%" alt="">
-    </div>
-    <div class="col">
-      <p>${element.name}</p>
-    </div>
-    <div class="col">
-    ${element.price}
-  <div class="col quantityDisplay">
-    x ${element.quantity}
-  </div>
-  <div class="col">
-  <button class="btn" onclick="quantAdd(${index})"><i class="bi bi-plus"></i></button>
-  <button class="btn" onclick="quantSub(${index})"><i class="bi bi-dash"></i></button>
-  </div>
-    </div>
-   </div> 
-  </div>
-    `
-});
+      <div class="col">
+      <button class="btn" onclick="quantAdd(${index})"><i class="bi bi-plus"></i></button>
+      <button class="btn" onclick="quantSub(${index})"><i class="bi bi-dash"></i></button>
+      </div>
+        </div>
+       </div> 
+      </div>
+        `
+    });
+}
+cartItems()
+
+
 function Remove(index) {
     let position = cart[index].id
     let target = cart.findIndex(obj => obj.id === position)
      cart.splice(target,1)
+
      localStorage.setItem("cart",JSON.stringify(cart))
-     location.reload();
+
+     cart = cart
+    cartItems()    //  location.reload();
  }
 function total(){
-
     let cartTotal = cart.reduce((accumulator, cart) => {
       let price = parseFloat(cart.price) * parseFloat(cart.quantity);
       return accumulator + price;
@@ -235,9 +243,10 @@ function add_to_cart(index) {
     // Update cart length display
     cart_length.innerHTML = cart.length;
     cart_length_2.innerHTML =cart.length
+
   }
  
-  location.reload()
+//   location.reload()
   total()
 }
 function search_add_to_cart(index){
