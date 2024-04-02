@@ -100,6 +100,9 @@ animation-duration:10s;
 .search input::placeholder{
     color: gray;
 }
+.error-image {
+    width: 30%;
+}
 /* ----------ABOUT US---------- */
 #about{
     text-align: center;

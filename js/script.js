@@ -288,7 +288,10 @@ function search() {
 
     if(searchInput == ''){
 searched.innerHTML=`
-<center><p class="error">Incorrect search input</p></center>
+<center>
+<p>Sorry can't find your Item<p/>
+<img src="https://i.ibb.co/g60DcbQ/searchfood.png" class='error-image'/>
+</center>
 `
     }else{
         searched.innerHTML = '';
@@ -327,6 +330,9 @@ searched.innerHTML=`
     }
   
 }
+
+document.querySelector('.searchbar').addEventListener('input',search)
+ 
 //ADD TO WISHLIST
 function add_to_wishlist(index){
 
