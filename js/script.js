@@ -35,7 +35,40 @@ const list = [
     {"id":33,"name":"Rum Berry cocktail","image":"https://i.ibb.co/rGk1yDb/rumberry-cocktail.png","price":"6.99","category":"drinks","description":"Transport yourself to a tropical paradise with our refreshing rum berry cocktail, bursting with fruity flavor and a hint of island rum.",quantity:1},
     {"id":34,"name":"Perfect Vanilla Bean Iced Coffee","image":"https://i.ibb.co/f4GY0bf/Perfect-Vanilla-Bean-Iced-Coffee.png","price":"5.99","category":"drinks","description":"Start your day off right with our smooth and creamy vanilla bean iced coffee, the perfect pick-me-up for any occasion.",quantity:1}
 ];
-
+const review = [
+    {
+      id: 1,
+      pic: 'https://i.pinimg.com/564x/19/b6/fa/19b6fa6c5ebfadd4945c70afe89f169d.jpg',
+      name: 'John Doe',
+      text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusantium debitis optio cupiditate laboriosam omnis tenetur nisi quia quas atque provident sapiente nemo ex modi expedita, odit fugiat nesciunt non.'
+    },
+    {
+      id: 2,
+      pic: 'https://i.pinimg.com/564x/2e/f1/13/2ef1137288bbc3b64e69641fc9ed8e3b.jpg',
+      name: 'Alice Smith',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur enim nisi, at rutrum nibh dapibus eu. Fusce ullamcorper, velit sit amet tincidunt.'
+    },
+    {
+      id: 3,
+      pic: 'https://i.pinimg.com/564x/58/c4/3e/58c43e39ff83153804dc302d0f3dae6c.jpg',
+      name: 'Bob Johnson',
+      text: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer et mattis purus. Nam posuere eros ac magna sollicitudin volutpat.'
+    },
+    {
+      id: 4,
+      pic: 'https://i.pinimg.com/564x/f4/59/47/f4594755648ce1257f05dc24eed40db2.jpg',
+      name: 'Emily Davis',
+      text: 'Donec vitae tincidunt leo. In vitae dolor eget magna venenatis dapibus nec a libero. Curabitur quis nunc non est volutpat malesuada ut vel libero.'
+    },
+    {
+      id: 5,
+      pic: 'https://i.pinimg.com/564x/de/cc/e0/decce044ca6c600c82b3052c934a1527.jpg',
+      name: 'Michael Brown',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    }
+  ];
+  
+  console.log(review)
 // CALLING FROM LOCAL STORAGE
 let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localStorage.getItem('wishlist')) : [];
@@ -125,6 +158,18 @@ function total(){
 total()
 //--------------
 //---------------
+review.forEach(element => {
+    document.querySelector('.review').innerHTML += `
+        <div class="card">
+            <center>
+                <h5>${element.name}</h5>
+                <img src="${element.pic}" alt="">
+            </center>
+            <br>
+            <p>"${element.text}"</p>
+        </div>
+    `;
+});
         //DISPLAY OF PRODUCTS
 list.forEach((element, index) => {
     display.innerHTML += `
@@ -139,7 +184,7 @@ list.forEach((element, index) => {
     <center>
     <div class='row'>
     <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-    <div class='col'> <button onclick="singleProd(${index})"  class="view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-right"></i></button></div>
+    <div class='col'> <button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></div>
     <div>
     
     </center>

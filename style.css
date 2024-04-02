@@ -6,7 +6,8 @@ body{
 }
 :root{
     ---background_color: rgb(255, 149, 0);
-    ---secondary:black;
+    ---secondary:#0D0D0D;
+    ---Third-color:ghostwhite;
     ---font-family: Georgia, 'Times New Roman', Times, serif
 
 }
@@ -92,7 +93,7 @@ animation-duration:10s;
 }
 
 .search input{
-    color: black;
+    color:var(---secondary);
     border: 1px solid gray;
     border-radius: 10px;
    
@@ -124,19 +125,51 @@ animation-duration:10s;
     font-weight: 900;
     padding: 5% 0;
 }
-
-
+.review img{
+ width: 20px;
+object-fit: cover;
+aspect-ratio: 1/1;
+border-radius:50% ;
+}
+.review .card{
+    margin: 10px;
+    background-color: var(---secondary);
+    width: 20%;
+    border: 1px solid silver;
+}
+.review p{
+    font-size: small;
+    color: white;
+    padding: 10px;
+}
+.review{
+  display: flex;
+  flex-direction: row;
+}
+.review h5{
+    color: white;
+    padding: 10px;
+}
 /* --------------main section------------------ */
 .main{
-    background-color: white;
+    background-color: var(---secondary);
     margin-top: 50px;
 }
 .output{
     z-index: 0;
-  
+  background-color: var(---secondary);
+}
+.output p{
+    color: white;
+}
+
+.output .price{
+    color: white;
 }
 .output .card{
     width: 350px;
+    background-color: var(---secondary);
+    border: 1px solid gray;
 }
 .output,.searched ,.displayWish{
     text-align: center;
@@ -146,10 +179,10 @@ animation-duration:10s;
     /* justify-content: center; */
 }
 
+ 
 .cart ,
 .display{
     text-align: center;
-    /* display: grid;id */
     grid-template-columns: auto auto auto auto;
     justify-content: center;
 }
@@ -170,17 +203,20 @@ animation-duration:10s;
     padding: 10px;
 }
 .button{
-   background-color: white;
-
+   background-color: var(---secondary);
    border: none;
     color:var(---secondary);
     width:80%;
     padding: 10px;
 }
+.bi-heart,.bi-bag-plus,.bi-arrow-right{
+    color: white;
+}
+ 
 .wishbtn{
     padding: 10px;
     border: none;
-    background-color: white;
+    background-color: var(---secondary);
     float: right;
 }
  
@@ -459,6 +495,7 @@ transition: 1s;
 .searched{
     display: flex;
     flex-direction: column;
+    background-color: var(---secondary);
 }
 
 .searched .card{
