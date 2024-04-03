@@ -4,7 +4,7 @@ const list = [
     {"id":2,"name":"Crispy Chicken Tacos","image":"https://i.ibb.co/hcTBcKy/crispy-chicken-tacos.png","price":"14.99","category":"meal","description":"Indulge in a crunchy delight with our crispy chicken tacos, topped with fresh salsa and creamy guacamole."},
     {"id":3,"name":"Hot dog","image":"https://i.ibb.co/XJqR4Xv/hotdog.png","price":"9.99","category":"meal","description":"A classic favorite, our hot dog is grilled to perfection and topped with your favorite condiments for a satisfying bite.",quantity:1},
     {"id":4,"name":"Sphagetti and meat sauce","image":"https://i.ibb.co/6sDZhWp/sphaggeti-and-meat-sauce.png","price":"16.99","category":"meal","description":"Dive into a hearty bowl of spaghetti smothered in savory meat sauce, a timeless comfort food.",quantity:1},
-    {"id":5,"name":"Pizza","image":"https://i.ibb.co/yVjjv7B/pizza.jpg","price":"18.99","category":"meal","description":"Our pizza is topped with the finest ingredients and baked to perfection, offering a taste of Italy in every slice.",quantity:1},
+    {"id":5,"name":"Pizza","image":"https://i.ibb.co/N7vpZmv/pizza.png","price":"18.99","category":"meal","description":"Our pizza is topped with the finest ingredients and baked to perfection, offering a taste of Italy in every slice.",quantity:1},
     {"id":6,"name":"Fish and Chips","image":"https://i.ibb.co/XYtqBC6/fish-and-chips-1.png","price":"17.99","category":"meal","description":"Enjoy a taste of the seaside with our crispy battered fish served alongside golden fries, a British classic.",quantity:1},
     {"id":7,"name":"Pumpkin Cookie Dough Ice-Cream","image":"https://i.ibb.co/PQNYR03/pumpkin-coookie-dough-ice-cream.png","price":"8.99","category":"desert","description":"Treat yourself to a creamy scoop of pumpkin-infused ice cream, studded with chunks of cookie dough.",quantity:1},
     {"id":8,"name":"Chocolate Oreo Pudding Delight","image":"https://i.ibb.co/Tv85T1w/Chocolate-Oreo-Pudding-Delight.png","price":"9.99","category":"desert","description":"Indulge your sweet tooth with layers of rich chocolate pudding and crushed Oreo cookies, a heavenly dessert.",quantity:1},
@@ -68,7 +68,7 @@ const review = [
     }
   ];
   
-  console.log(review)
+ 
 // CALLING FROM LOCAL STORAGE
 let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localStorage.getItem('wishlist')) : [];
@@ -94,9 +94,9 @@ let SinglepProductDisplay = document.querySelector('.SinglepProductDisplay')
 let filter;
 // LIST LENGTHS
 
-cart_length.innerHTML = cart.length
-cart_length_2.innerHTML = cart.length
-wish_length.innerHTML = wishlist.length
+cart_length.innerHTML = `( ${cart.length} )`
+cart_length_2.innerHTML =`( ${cart.length} )`
+wish_length.innerHTML =  `( ${wishlist.length } )`
  
 
 
@@ -165,8 +165,16 @@ review.forEach(element => {
                 <h5>${element.name}</h5>
                 <img src="${element.pic}" alt="">
             </center>
+            <div class="star-holder">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            </div>
             <br>
             <p>"${element.text}"</p>
+           
         </div>
     `;
 });
@@ -184,7 +192,7 @@ list.forEach((element, index) => {
     <center>
     <div class='row'>
     <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-    <div class='col'> <button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></div>
+    <div class='col'> <button class="button" onclick="singleProd(${index})"  data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="bi bi-arrow-right"></i></button></div>
     <div>
     
     </center>
@@ -334,7 +342,7 @@ function search() {
     if(searchInput == ''){
 searched.innerHTML=`
 <center>
-<p>Sorry can't find your Item<p/>
+<p style="color:white">Sorry can't find your Item<p/>
 <img src="https://i.ibb.co/g60DcbQ/searchfood.png" class='error-image'/>
 </center>
 `
@@ -348,7 +356,7 @@ searched.innerHTML=`
 
             <div class="card" class="container-fluid row" data-aos="fade-up">
                 <div class="heart-holder" style="float:right;">
-                    <i class="bi bi-heart" style="float: right;margin-right: 2%;"></i>
+                    <i class="bi bi-heart" style="float: right;margin-right: 2%; padding:10px"></i>
                 </div>
                 
                 <div class="row">
@@ -361,7 +369,7 @@ searched.innerHTML=`
                           <p>R ${item.price}</p>
                     </div>
                     <div class="col">
-                        <button onclick="search_add_to_cart(${index})"><i class="bi bi-bag"></i></button>
+                        <button onclick="search_add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button>
                         <br>
                         <br>
                         <button onclick="singleProdSearch(${index})" class="view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-right"></i></button></button>

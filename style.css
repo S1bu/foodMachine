@@ -80,7 +80,8 @@ animation-duration:10s;
 /* search */
 .search{
     text-align: center;
-    margin-top: 1%;
+    background-color: var(---secondary);
+    padding: 1% 0;
 }
 .search button{
     background-color: var(---secondary);
@@ -150,10 +151,17 @@ border-radius:50% ;
     color: white;
     padding: 10px;
 }
+.review .bi-star-fill {
+    color: gold;
+    font-size: small;
+}
+.review .star-holder{
+    margin-top: 10px;
+}
 /* --------------main section------------------ */
 .main{
     background-color: var(---secondary);
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .output{
     z-index: 0;
@@ -501,6 +509,16 @@ transition: 1s;
 .searched .card{
     width: 90%;
     margin: 5px 4.5%;
+    background-color: var(---secondary);
+    border: gray 1px solid;
+}
+
+.searched .card p{
+    color: white;
+}
+
+.searched .bi-bag-plus{
+    color: white;
 }
 
 .searched .card .col-3{
@@ -514,11 +532,14 @@ transition: 1s;
 }
 
 .searched .card button{
-    background-color: white;
+    background-color: var(---secondary);
     border: none;
 }
+.search i{
+    color: white;
+}
 
-
+/* 
 .cart_length,.wish_length,.cart_length_2{
     background-color: var(---secondary);
     border-radius:20px ;
@@ -526,7 +547,7 @@ transition: 1s;
     padding: 5px;
     font-size: 10px;
     
-}
+} */
 
 .cart .card button{
     background-color: white;
