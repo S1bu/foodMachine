@@ -2,5 +2,82 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.nav{
+    background-color: wheat;
+    
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-content: space-around;
+        z-index: 100;
+        padding: 10px;
+}
+.nav
+a{
+    text-decoration: none;
+    color: black;
+    font-weight:800;
+
+}
+.main{
+    background-color: wheat;
+    height: 100vh;
 }
 
+.right , .left{
+width: 45%;
+}
+
+.right{
+    float: right;
+    border: 2px solid black;
+    border-radius: 10px ;
+    object-fit: contain;
+    border: 2px solid black;
+    box-shadow: 10px 10px 1px;
+}
+
+.left{
+    margin-left: 5px;
+    float: left;
+    border: 2px solid black;
+    border-radius: 10px ;
+    object-fit: contain;
+    border: 2px solid black;
+    box-shadow: 10px 10px 1px;
+    position: fixed;
+    overflow: scroll;
+    height: 85vh;
+    overflow-x:hidden;
+}
+ 
+
+img{
+    width: 100px;
+}
+
+.display{
+    display:flex;
+    flex-direction: column;
+}
+ .btn-trash{
+    box-shadow: 5px 5px 1px;
+    background-color: rgba(255, 0, 0, 0.694);
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+border-radius: 10px;
+transition: 1s;
+}
+ .btn-trash:hover{
+    box-shadow:none;
+    transition: 1s;
+}
+
+.container{
+    border: 1px solid black;
+    margin: 10px;
+}
+
+ 
