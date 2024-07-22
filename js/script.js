@@ -1,40 +1,345 @@
 // The arrays
-const list = [
-    {"id":1,"name":"Juicy Chicken Burger","image":"https://i.ibb.co/0stWHsp/burger.png","price":"12.99","category":"meal","description":"Sink your teeth into our succulent chicken burger, bursting with flavor and served with your choice of toppings.",quantity:1},
-    {"id":2,"name":"Crispy Chicken Tacos","image":"https://i.ibb.co/hcTBcKy/crispy-chicken-tacos.png","price":"14.99","category":"meal","description":"Indulge in a crunchy delight with our crispy chicken tacos, topped with fresh salsa and creamy guacamole."},
-    {"id":3,"name":"Hot dog","image":"https://i.ibb.co/XJqR4Xv/hotdog.png","price":"9.99","category":"meal","description":"A classic favorite, our hot dog is grilled to perfection and topped with your favorite condiments for a satisfying bite.",quantity:1},
-    {"id":4,"name":"Sphagetti and meat sauce","image":"https://i.ibb.co/6sDZhWp/sphaggeti-and-meat-sauce.png","price":"16.99","category":"meal","description":"Dive into a hearty bowl of spaghetti smothered in savory meat sauce, a timeless comfort food.",quantity:1},
-    {"id":5,"name":"Pizza","image":"https://i.ibb.co/N7vpZmv/pizza.png","price":"18.99","category":"meal","description":"Our pizza is topped with the finest ingredients and baked to perfection, offering a taste of Italy in every slice.",quantity:1},
-    {"id":6,"name":"Fish and Chips","image":"https://i.ibb.co/XYtqBC6/fish-and-chips-1.png","price":"17.99","category":"meal","description":"Enjoy a taste of the seaside with our crispy battered fish served alongside golden fries, a British classic.",quantity:1},
-    {"id":7,"name":"Pumpkin Cookie Dough Ice-Cream","image":"https://i.ibb.co/PQNYR03/pumpkin-coookie-dough-ice-cream.png","price":"8.99","category":"desert","description":"Treat yourself to a creamy scoop of pumpkin-infused ice cream, studded with chunks of cookie dough.",quantity:1},
-    {"id":8,"name":"Chocolate Oreo Pudding Delight","image":"https://i.ibb.co/Tv85T1w/Chocolate-Oreo-Pudding-Delight.png","price":"9.99","category":"desert","description":"Indulge your sweet tooth with layers of rich chocolate pudding and crushed Oreo cookies, a heavenly dessert.",quantity:1},
-    {"id":9,"name":"Crispy Chocolate Chip waffles","image":"https://i.ibb.co/w7FFbvx/crispy-chocoate-chip-waffles.png","price":"7.99","category":"desert","description":"Start your day off right with our crispy waffles studded with chocolate chips, drizzled with maple syrup.",quantity:1},
-    {"id":10,"name":"Old Fashioned Devils Food Cake","image":"https://i.ibb.co/rZ5cRcy/devil-fruit-cake.png","price":"11.99","category":"desert","description":"Satisfy your craving for chocolate with our decadent devil's food cake, rich and moist with a velvety frosting.",quantity:1},
-    {"id":11,"name":"Peppermint Crisp Tart","image":"https://i.ibb.co/Xy7sx4x/peppermint-crisp-tart.png","price":"10.99","category":"desert","description":"Refresh your palate with our cool and creamy peppermint crisp tart, a South African favorite.",quantity:1},
-    {"id":12,"name":"Milk Tart","image":"https://i.ibb.co/KKGhhGW/milktart.png","price":"8.99","category":"desert","description":"Delight in the creamy goodness of our traditional milk tart, with a hint of cinnamon in a buttery crust.",quantity:1},
-    {"id":13,"name":"Galaxy Cup cake","image":"https://i.ibb.co/vPV03Qs/galaxy-cup-cake.png","price":"6.99","category":"desert","description":"Blast off into flavor with our out-of-this-world galaxy cupcake, topped with colorful swirls and edible glitter.",quantity:1},
-    {"id":14,"name":"Brownie Sundae","image":"https://i.ibb.co/KhFYPzC/brownie-sundae.png","price":"9.99","category":"desert","description":"Indulge in the ultimate dessert experience with our fudgy brownie topped with scoops of ice cream, whipped cream, and chocolate sauce.",quantity:1},
-    {"id":15,"name":"Magnum Ice cream","image":"https://i.ibb.co/db7g5wP/magnum-ice-cream.png","price":"5.99","category":"desert","description":"Treat yourself to a moment of luxury with our premium Magnum ice cream, coated in a thick layer of Belgian chocolate.",quantity:1},
-    {"id":16,"name":"Mini pizza","image":"https://i.ibb.co/m6FFqcb/mini-pizza.png","price":"8.99","category":"starters","description":"Enjoy a bite-sized version of our classic pizza, perfect for sharing or savoring all to yourself.",quantity:1},
-    {"id":17,"name":"Sushi","image":"https://i.ibb.co/GHwXN1F/sushi.png","price":"12.99","category":"starters","description":"Experience the artistry of Japanese cuisine with our selection of fresh sushi, expertly crafted and bursting with flavor.",quantity:1},
-    {"id":18,"name":"Samoosas","image":"https://i.ibb.co/LPggH7f/samoosa.png","price":"9.99","category":"starters","description":"Delight in the crispy goodness of our savory samoosas, filled with spiced potatoes or minced meat, a beloved Indian snack.",quantity:1},
-    {"id":19,"image":"https://i.ibb.co/9hhxSnG/wings.png","name":"Wings","category":"starters","price":"14.99","description":"Get your hands dirty with our finger-licking chicken wings, coated in your choice of tangy sauce for the ultimate flavor explosion.",quantity:1},
-    {"id":20,"name":"Beef swekers","image":"https://i.ibb.co/hX9MNXC/beef-skewers.png","price":"11.99","category":"starters","description":"Savor the smoky goodness of our tender beef skewers, marinated to perfection and grilled to juicy perfection.",quantity:1},
-    {"id":21,"name":"Chipotle Chicken Nachos with Jalapeño Yogurt","image":"https://i.ibb.co/YtmJC9j/nachos.png","price":"13.99","category":"starters","description":"Spice up your snack time with our loaded nachos topped with chipotle chicken and zesty jalapeño yogurt.",quantity:1},
-    {"id":22,"name":"Beef Burgers x 6","image":"https://i.ibb.co/7pyhHcB/beef-burgers.png","price":"29.99","category":"Special","description":"Gather your friends and family for a feast with our pack of six juicy beef burgers, perfect for grilling up a storm.",quantity:1},
-    {"id":23,"name":"Custard & Jelly x2","image":"https://i.ibb.co/dc8VyC1/custurad-and-jelly.png","price":"19.99","category":"Special","description":"Enjoy a nostalgic treat with our classic custard and jelly cups, a sweet and creamy delight.",quantity:1},
-    {"id":24,"name":"Moroccan Chicken Wrap x","image":"https://i.ibb.co/3fwmZMK/moroccan-chicken-wraps.png","price":"15.99","category":"Special","description":"Transport your taste buds to Morocco with our flavorful chicken wrap, filled with exotic spices and fresh ingredients.",quantity:1},
-    {"id":25,"name":"Rasberry mores Milkshake","image":"https://i.ibb.co/Swt2fVG/Rasberry-milkshake.png","price":"8.99","category":"Special","description":"Indulge in the nostalgic flavors of summer with our creamy raspberry milkshake, topped with gooey marshmallows and chocolate.",quantity:1},
-    {"id":26,"name":"Water","image":"https://i.ibb.co/TcfvM1j/water.png","price":"2.99","category":"drinks","description":"Stay refreshed with our crisp and clear bottled water, the perfect companion for any meal.",quantity:1},
-    {"id":27,"name":"Riverdale milkshake","image":"https://i.ibb.co/FwtDqhB/Riverdale-milkshake.png","price":"5.99","category":"drinks","description":"Take a sip of nostalgia with our creamy Riverdale milkshake, inspired by the classic diner shakes of the 1950s.",quantity:1},
-    {"id":28,"name":"Score energy drink","image":"https://i.ibb.co/09CTJZ7/score.png","price":"3.99","category":"drinks","description":"Power up with our invigorating Score energy drink, packed with caffeine and electrolytes for a burst of energy.",quantity:1},
-    {"id":29,"name":"Coke","image":"https://i.ibb.co/540Tnvd/coke.png","price":"1.99","category":"drinks","description":"Enjoy the classic taste of Coca-Cola, ice-cold and refreshing with every sip.",quantity:1},
-    {"id":30,"name":"Corona","image":"https://i.ibb.co/1QfdsBR/corona.png","price":"3.99","category":"drinks","description":"Unwind with a chilled bottle of Corona beer, perfect for kicking back and relaxing.",quantity:1},
-    {"id":31,"name":"Fanta Orange","image":"https://i.ibb.co/ccdgJ4r/fanta-orange.png","price":"2.99","category":"drinks","description":"Quench your thirst with the fruity goodness of Fanta Orange, fizzy and refreshing with every sip.",quantity:1},
-    {"id":32,"name":"HEINEKEN","image":"https://i.ibb.co/ts4v1qF/heinken.png","price":"4.99","category":"drinks","description":"Elevate your drinking experience with a cold bottle of Heineken beer, brewed to perfection for a crisp and refreshing taste.",quantity:1},
-    {"id":33,"name":"Rum Berry cocktail","image":"https://i.ibb.co/rGk1yDb/rumberry-cocktail.png","price":"6.99","category":"drinks","description":"Transport yourself to a tropical paradise with our refreshing rum berry cocktail, bursting with fruity flavor and a hint of island rum.",quantity:1},
-    {"id":34,"name":"Perfect Vanilla Bean Iced Coffee","image":"https://i.ibb.co/f4GY0bf/Perfect-Vanilla-Bean-Iced-Coffee.png","price":"5.99","category":"drinks","description":"Start your day off right with our smooth and creamy vanilla bean iced coffee, the perfect pick-me-up for any occasion.",quantity:1}
-];
+const list =  [
+  {
+  "id": 1,
+  "name": "Juicy Chicken Burger",
+  "image": "https://i.ibb.co/0stWHsp/burger.png",
+  "price": "12.99",
+  "category": "meal",
+  "description": "Sink your teeth into our succulent chicken burger, bursting with flavor and served with your choice of toppings.",
+  "ingredients": ["Chicken breast", "Bun", "Lettuce", "Tomato", "Cheese", "Mayonnaise", "Pickles"],
+  "quantity": 1
+  },
+  {
+  "id": 2,
+  "name": "Crispy Chicken Tacos",
+  "image": "https://i.pinimg.com/564x/bc/db/f5/bcdbf5d5572ddc4c097b02f2f55105e7.jpg",
+  "price": "14.99",
+  "category": "meal",
+  "description": "Indulge in a crunchy delight with our crispy chicken tacos, topped with fresh salsa and creamy guacamole.",
+  "ingredients": ["Chicken breast", "Tortilla", "Salsa", "Guacamole", "Lettuce", "Tomato", "Cheese"],
+  "quantity": 1
+  },
+  {
+  "id": 3,
+  "name": "Hot dog",
+  "image": "https://i.pinimg.com/564x/a3/d9/34/a3d93497180e92e5ca7166141efdb493.jpg",
+  "price": "9.99",
+  "category": "meal",
+  "description": "A classic favorite, our hot dog is grilled to perfection and topped with your favorite condiments for a satisfying bite.",
+  "ingredients": ["Sausage", "Bun", "Ketchup", "Mustard", "Relish", "Onions", "Sauerkraut"],
+  "quantity": 1
+  },
+  {
+  "id": 4,
+  "name": "Sphagetti and meat sauce",
+  "image": "https://i.pinimg.com/564x/17/58/c7/1758c7c884753155f802e50372103200.jpg",
+  "price": "16.99",
+  "category": "meal",
+  "description": "Dive into a hearty bowl of spaghetti smothered in savory meat sauce, a timeless comfort food.",
+  "ingredients": ["Spaghetti", "Ground beef", "Tomato sauce", "Onions", "Garlic", "Herbs"],
+  "quantity": 1
+  },
+  {
+  "id": 5,
+  "name": "Pizza",
+  "image": "https://i.pinimg.com/564x/b9/a9/6c/b9a96c89d1348347524418f7056d7649.jpg",
+  "price": "18.99",
+  "category": "meal",
+  "description": "Our pizza is topped with the finest ingredients and baked to perfection, offering a taste of Italy in every slice.",
+  "ingredients": ["Dough", "Tomato sauce", "Mozzarella cheese", "Pepperoni", "Sausage", "Mushrooms", "Onions"],
+  "quantity": 1
+  },
+  {
+  "id": 6,
+  "name": "Fish and Chips",
+  "image": "https://i.pinimg.com/736x/9a/02/8b/9a028b4e049e7c7ed4acc34a4b8ca5ef.jpg",
+  "price": "17.99",
+  "category": "meal",
+  "description": "Enjoy a taste of the seaside with our crispy battered fish served alongside golden fries, a British classic.",
+  "ingredients": ["Fish", "Batter", "Fries", "Tartar sauce"],
+  "quantity": 1
+  },
+  {
+  "id": 7,
+  "name": "Pumpkin Cookie Dough Ice-Cream",
+  "image": "https://i.ibb.co/PQNYR03/pumpkin-coookie-dough-ice-cream.png",
+  "price": "8.99",
+  "category": "desert",
+  "description": "Treat yourself to a creamy scoop of pumpkin-infused ice cream, studded with chunks of cookie dough.",
+  "ingredients": ["Pumpkin ice cream", "Cookie dough", "Whipped cream"],
+  "quantity": 1
+  },
+  {
+    "id": 8,
+    "name": "Chocolate Oreo Pudding Delight",
+    "image": "https://i.ibb.co/Tv85T1w/Chocolate-Oreo-Pudding-Delight.png",
+    "price": "9.99",
+    "category": "desert",
+    "description": "Indulge your sweet tooth with layers of rich chocolate pudding and crushed Oreo cookies, a heavenly dessert.",
+    "ingredients": ["Chocolate pudding", "Oreo cookies", "Whipped cream"],
+    "quantity": 1
+    },
+    {
+    "id": 9,
+    "name": "Crispy Chocolate Chip waffles",
+    "image": "https://i.pinimg.com/564x/e3/5a/87/e35a87911dfd1aaf09a24d715c8b3fc2.jpg",
+    "price": "7.99",
+    "category": "desert",
+    "description": "Start your day off right with our crispy waffles studded with chocolate chips, drizzled with maple syrup.",
+    "ingredients": ["Waffle batter", "Chocolate chips", "Maple syrup", "Butter"],
+    "quantity": 1
+    },
+    {
+    "id": 10,
+    "name": "Old Fashioned Devils Food Cake",
+    "image": "https://i.ibb.co/rZ5cRcy/devil-fruit-cake.png",
+    "price": "11.99",
+    "category": "desert",
+    "description": "Satisfy your craving for chocolate with our decadent devil's food cake, rich and moist with a velvety frosting.",
+    "ingredients": ["Chocolate cake", "Frosting", "Sugar", "Eggs", "Butter"],
+    "quantity": 1
+    },
+    {
+    "id": 11,
+    "name": "Peppermint Crisp Tart",
+    "image": "https://i.ibb.co/Xy7sx4x/peppermint-crisp-tart.png",
+    "price": "10.99",
+    "category": "desert",
+    "description": "Refresh your palate with our cool and creamy peppermint crisp tart, a South African favorite.",
+    "ingredients": ["Pastry crust", "Peppermint filling", "Chocolate", "Whipped cream"],
+    "quantity": 1
+    },
+    {
+    "id": 12,
+    "name": "Milk Tart",
+    "image": "https://i.ibb.co/KKGhhGW/milktart.png",
+    "price": "8.99",
+    "category": "desert",
+    "description": "Delight in the creamy goodness of our traditional milk tart, with a hint of cinnamon in a buttery crust.",
+    "ingredients": ["Pastry crust", "Milk", "Sugar", "Eggs", "Cinnamon"],
+    "quantity": 1
+    },
+    {
+    "id": 13,
+    "name": "Galaxy Cup cake",
+    "image": "https://i.ibb.co/vPV03Qs/galaxy-cup-cake.png",
+    "price": "6.99",
+    "category": "desert",
+    "description": "Blast off into flavor with our out-of-this-world galaxy cupcake, topped with colorful swirls and edible glitter.",
+    "ingredients": ["Cupcake", "Buttercream", "Food coloring", "Edible glitter"],
+    "quantity": 1
+    },
+    {
+    "id": 14,
+    "name": "Brownie Sundae",
+    "image": "https://i.ibb.co/KhFYPzC/brownie-sundae.png",
+    "price": "9.99",
+    "category": "desert",
+    "description": "Indulge in the ultimate dessert experience with our fudgy brownie topped with scoops of ice cream, whipped cream, and chocolate sauce.",
+    "ingredients": ["Brownie", "Ice cream", "Whipped cream", "Chocolate sauce"],
+    "quantity": 1
+    },
+    {
+    "id": 15,
+    "name": "Magnum Ice cream",
+    "image": "https://i.ibb.co/db7g5wP/magnum-ice-cream.png",
+    "price": "5.99",
+    "category": "desert",
+    "description": "Treat yourself to a moment of luxury with our premium Magnum ice cream, coated in a thick layer of Belgian chocolate.",
+    "ingredients": ["Ice cream", "Belgian chocolate"],
+    "quantity": 1
+    },
+    {
+    "id": 16,
+    "name": "Mini pizza",
+    "image": "https://i.ibb.co/m6FFqcb/mini-pizza.png",
+    "price": "8.99",
+    "category": "starters",
+    "description": "Enjoy a bite-sized version of our classic pizza, perfect for sharing or savoring all to yourself.",
+    "ingredients": ["Dough", "Tomato sauce", "Mozzarella cheese", "Pepperoni", "Sausage", "Mushrooms", "Onions"],
+    "quantity": 1
+    },
+    {
+    "id": 17,
+    "name": "Sushi",
+    "image": "https://i.ibb.co/GHwXN1F/sushi.png",
+    "price": "12.99",
+    "category": "starters",
+    "description": "Experience the artistry of Japanese cuisine with our selection of fresh sushi, expertly crafted and bursting with flavor.",
+    "ingredients": ["Sushi rice", "Fish", "Vegetables", "Seaweed"],
+    "quantity": 1
+    },
+    {
+    "id": 18,
+    "name": "Samoosas",
+    "image": "https://i.ibb.co/LPggH7f/samoosa.png",
+    "price": "9.99",
+    "category": "starters",
+    "description": "Delight in the crispy goodness of our savory samoosas, filled with spiced potatoes or minced meat, a beloved Indian snack.",
+    "ingredients": ["Pastry", "Potatoes", "Minced meat", "Spices"],
+    "quantity": 1
+    },{
+      "id": 19,
+      "name": "Wings",
+      "image": "https://i.ibb.co/9hhxSnG/wings.png",
+      "price": "14.99",
+      "category": "starters",
+      "description": "Get your hands dirty with our finger-licking chicken wings, coated in your choice of tangy sauce for the ultimate flavor explosion.",
+      "ingredients": ["Chicken wings", "Sauce"],
+      "quantity": 1
+      },
+      {
+      "id": 20,
+      "name": "Beef swekers",
+      "image": "https://i.ibb.co/hX9MNXC/beef-skewers.png",
+      "price": "11.99",
+      "category": "starters",
+      "description": "Savor the smoky goodness of our tender beef skewers, marinated to perfection and grilled to juicy perfection.",
+      "ingredients": ["Beef", "Marinade", "Skewers"],
+      "quantity": 1
+      },
+      {
+      "id": 21,
+      "name": "Chipotle Chicken Nachos with Jalapeño Yogurt",
+      "image": "https://i.ibb.co/YtmJC9j/nachos.png",
+      "price": "13.99",
+      "category": "starters",
+      "description": "Spice up your snack time with our loaded nachos topped with chipotle chicken and zesty jalapeño yogurt.",
+      "ingredients": ["Tortilla chips", "Chipotle chicken", "Jalapeño yogurt", "Cheese", "Jalapeños"],
+      "quantity": 1
+      },
+      {
+      "id": 22,
+      "name": "Beef Burgers x 6",
+      "image": "https://i.ibb.co/7pyhHcB/beef-burgers.png",
+      "price": "29.99",
+      "category": "Special",
+      "description": "Gather your friends and family for a feast with our pack of six juicy beef burgers, perfect for grilling up a storm.",
+      "ingredients": ["Beef patties", "Buns", "Lettuce", "Tomato", "Cheese", "Pickles"],
+      "quantity": 6
+      },
+      {
+      "id": 23,
+      "name": "Custard & Jelly x2",
+      "image": "https://i.ibb.co/dc8VyC1/custurad-and-jelly.png",
+      "price": "19.99",
+      "category": "Special",
+      "description": "Enjoy a nostalgic treat with our classic custard and jelly cups, a sweet and creamy delight.",
+      "ingredients": ["Custard", "Jelly"],
+      "quantity": 2
+      },
+      {
+      "id": 24,
+      "name": "Moroccan Chicken Wrap x",
+      "image": "https://i.ibb.co/3fwmZMK/moroccan-chicken-wraps.png",
+      "price": "15.99",
+      "category": "Special",
+      "description": "Transport your taste buds to Morocco with our flavorful chicken wrap, filled with exotic spices and fresh ingredients.",
+      "ingredients": ["Chicken", "Tortilla", "Spices", "Vegetables"],
+      "quantity": 1
+      },
+      {
+      "id": 25,
+      "name": "Rasberry mores Milkshake",
+      "image": "https://i.ibb.co/Swt2fVG/Rasberry-milkshake.png",
+      "price": "8.99",
+      "category": "Special",
+      "description": "Indulge in the nostalgic flavors of summer with our creamy raspberry milkshake, topped with gooey marshmallows and chocolate.",
+      "ingredients": ["Raspberry ice cream", "Marshmallows", "Chocolate"],
+      "quantity": 1
+      },
+      {
+      "id": 26,
+      "name": "Water",
+      "image": "https://i.ibb.co/TcfvM1j/water.png",
+      "price": "2.99",
+      "category": "drinks",
+      "description": "Stay refreshed with our crisp and clear bottled water, the perfect companion for any meal.",
+      "ingredients": ["Water"],
+      "quantity": 1
+      },
+      {
+      "id": 27,
+      "name": "Soft Drink",
+      "image": "https://i.ibb.co/FwtDqhB/Riverdale-milkshake.png",
+      "price": "3.99",
+      "category": "drinks",
+      "description": "Quench your thirst with our selection of popular soft drinks, available in a range of flavors.",
+      "ingredients": ["Soft drink syrup", "Carbonated water"],
+      "quantity": 1
+      },
+      {
+      "id": 28,
+      "name": "Juice",
+      "image": "https://i.ibb.co/09CTJZ7/score.png",
+      "price": "4.99",
+      "category": "drinks",
+      "description": "Sip on a refreshing glass of 100% fruit juice, made with the finest ingredients and no added sugars.",
+      "ingredients": ["Fruit", "Water"],
+      "quantity": 1
+      },
+      {
+      "id": 29,
+      "name": "Coffee",
+      "image": "https://i.ibb.co/540Tnvd/coke.png",
+      "price": "2.99",
+      "category": "drinks",
+      "description": "Kickstart your day with a rich and smooth cup of coffee, roasted to perfection.",
+      "ingredients": ["Coffee beans", "Water"],
+      "quantity": 1
+      },
+      {
+      "id": 30,
+      "name": "Tea",
+      "image": "https://i.ibb.co/1QfdsBR/corona.png",
+      "price": "2.99",
+      "category": "drinks",
+      "description": "Unwind with a soothing cup of tea, available in a range of flavors and blends.",
+      "ingredients": ["Tea leaves", "Water"],
+      "quantity": 1
+      },
+      {
+      "id": 31,
+      "name": "Craft Beer",
+      "image": "https://i.ibb.co/ccdgJ4r/fanta-orange.png",
+      "price": "7.99",
+      "category": "drinks",
+      "description": "Discover a new favorite with our selection of craft beers, featuring unique flavors and brews.",
+      "ingredients": ["Malted barley", "Hops", "Yeast", "Water"],
+      "quantity": 1
+      },
+      {
+      "id": 32,
+      "name": "Heinken",
+      "image": "https://i.ibb.co/ts4v1qF/heinken.png",
+      "price": "9.99",
+      "category": "drinks",
+      "description": "Indulge in a glass of fine wine, carefully curated from top vineyards around the world.",
+      "ingredients": ["Grapes", "Yeast"],
+      "quantity": 1
+      },
+      {
+      "id": 33,
+      "name": "Cocktail",
+      "image": "https://i.ibb.co/rGk1yDb/rumberry-cocktail.png",
+      "price": "12.99",
+      "category": "drinks",
+      "description": "Experience the art of mixology with our handcrafted cocktails, featuring premium spirits and fresh ingredients.",
+      "ingredients": ["Spirits", "Mixers", "Garnishes"],
+      "quantity": 1
+      },
+      {
+      "id": 34,
+      "name": "Mocktail",
+      "image": "https://i.ibb.co/f4GY0bf/Perfect-Vanilla-Bean-Iced-Coffee.png",
+      "price": "8.99",
+      "category": "drinks",
+      "description": "Enjoy a refreshing mocktail, expertly crafted with flavorful ingredients and no alcohol.",
+      "ingredients": ["Juice", "Soda", "Garnishes"],
+      "quantity": 1
+      }
+]
 const review = [
     {
       id: 1,
@@ -192,7 +497,7 @@ list.forEach((element, index) => {
     <center>
     <div class='row'>
     <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-    <div class='col'> <button class="button" onclick="singleProd(${index})"  data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="bi bi-arrow-right"></i></button></div>
+    <div class='col'> <a href ='../html/singleProd.html'> <button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
     <div>
     
     </center>
@@ -205,41 +510,42 @@ function clearSingleProd(){
     // localStorage.setItem("single_product",JSON.stringify(single_product))
     location.reload()
 }
-function singleProdSearch(index){
-    single_product.push(
-        {
-            id: filteredItems[index].id,
-            name: filteredItems[index].name, 
-            price: filteredItems[index].price,
-            image:filteredItems[index].image,
-            description:filteredItems[index].description
-        }
+// function singleProdSearch(index){
+//     single_product.push(
+//         {
+//             id: filteredItems[index].id,
+//             name: filteredItems[index].name, 
+//             price: filteredItems[index].price,
+//             image:filteredItems[index].image,
+//             description:filteredItems[index].description,
+//             ingredients:filteredItems[index].ingredients
+//         }
        
-        );
+//         );
  
       
-        single_product.forEach(element => {
-            SinglepProductDisplay.innerHTML+=
-        `
-        <div class="row modal-row">
-        <center>
-        <h3>${element.name}</h3>
-        </center>
-        </div>
+//         single_product.forEach(element => {
+//             SinglepProductDisplay.innerHTML+=
+//         `
+//         <div class="row modal-row">
+//         <center>
+//         <h3>${element.name}</h3>
+//         </center>
+//         </div>
     
-        <br>
-        <br>
-        <div class="col text-center">
-        <img src="${element.image}" alt="">
-        </div>
+//         <br>
+//         <br>
+//         <div class="col text-center">
+//         <img src="${element.image}" alt="">
+//         </div>
        
        
-        <p><b>Price :</b></b>${element.price}</p>
-        <p><b>Description: </b>${element.description}</p>
+//         <p><b>Price :</b></b>${element.price}</p>
+//         <p><b>Description: </b>${element.description}</p>
       
-        `
-        })
-}
+//         `
+//         })
+// }
 function singleProd(index){
     single_product.push(
         {
@@ -247,32 +553,12 @@ function singleProd(index){
             name: list[index].name, 
             price: list[index].price,
             image:list[index].image,
-            description:list[index].description
-        }
-       
+            description:list[index].description,
+            ingredients:list[index].ingredients
+        },
+
         );
-      
-        single_product.forEach(element => {
-            SinglepProductDisplay.innerHTML+=
-        `
-        <div class="row modal-row">
-        <center>
-        <h3>${element.name}</h3>
-        </center>
-        </div>
-    
-        <br>
-        <br>
-        <div class="col text-center">
-        <img src="${element.image}" alt="">
-        </div>
-       
-       
-        <p><b>Price :</b> R ${element.price}</p>
-        <p><b>Description: </b>${element.description}</p>
-      
-        `
-        })
+localStorage.setItem("singleProduct",JSON.stringify(single_product))
 
      
 }
