@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://i.postimg.cc/HWJb40cJ/Screenshot-2024-07-23-171307.png" type="image/x-icon">
     <!-- animate css -->
     <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
     <!-- bs css -->
@@ -27,7 +27,7 @@
             <a href="./index.html">Home  </a>
             <a href="#about">About</a> 
             <a href="./html/cart.html">Cart <i class="bi bi-bag"></i> <span class="cart_length"></span></a>
-            <a href="./html/wish.html" >Wishlist <i class="bi bi-bag-heart"></i> <span class="wish_length"></span></a>
+            <a href="./html/wish.html">Revews <i class="bi bi-bag-heart"></i> <span class="wish_length"></span></a>
            
         </div>
     </header>
@@ -68,6 +68,7 @@
         <div class="review">
        
         </div>
+        <p class="review-more" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">more...</p>
         <br>
     </section>
 
@@ -94,26 +95,7 @@
 </div>
 
 
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Product Details</h1> -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white;"><i class="bi bi-x-lg"></i></button>
-        </div>
-        <div class="modal-body">
-            <div class="SinglepProductDisplay row">
-             
-              </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-<div class="cart">
-
+ 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Cart <i class="bi bi-bag"></i> <span class="cart_length_2"></span></h5>
@@ -131,19 +113,20 @@
 <!-- wishlist -->
 
 
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="wishlist" aria-labelledby="offcanvasScrollingLabel">
+<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Wish List</h5>
+    <h5 class="offcanvas-title" id="staticBackdropLabel">Reviews</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <!-- <p>Try scrolling the rest of the page to see this option in action.</p> -->
+    <div class="review-display">
+     
+    </div>
+  </div>
+  <div class="offcanvas-footer">
+   <input type="text" class="review-text" placeholder="message"> <button onclick="reviewinputview()" class="review-btn"><i class="bi bi-send"></i></button>
   </div>
 </div>
-</div>
-
-
-
 
 <!-- js -->
     <script src="./js/script.js"></script>

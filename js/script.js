@@ -370,13 +370,74 @@ const review = [
       pic: 'https://i.pinimg.com/564x/de/cc/e0/decce044ca6c600c82b3052c934a1527.jpg',
       name: 'Michael Brown',
       text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
-    }
+    },
+    {
+      id: 6,
+      pic: 'https://i.pinimg.com/564x/d0/ba/21/d0ba21bb168f59257a67abaa2a19a478.jpg',
+      name: 'Olivia Thompson',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 7,
+      pic: 'https://i.pinimg.com/564x/46/95/34/469534220723f31ca234d26cd71a05af.jpg',
+      name: ' Ethan Patel',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 8,
+      pic: 'https://i.pinimg.com/564x/df/51/07/df5107a44a4fc5a18535137aee49bdf2.jpg',
+      name: 'Ava Morales',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 9,
+      pic: 'https://i.pinimg.com/564x/72/d7/cc/72d7cc32e51ef9c829011bb9bf84f36a.jpg',
+      name: 'Liam Reynolds',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 10,
+      pic: 'https://i.pinimg.com/564x/f6/c3/f6/f6c3f678154c65d4fc6d0a3816c871e2.jpg',
+      name: 'Sophia Rodriguez',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 11,
+      pic: 'https://i.pinimg.com/564x/28/b5/a4/28b5a42ec108821f8a16acaafd96bba4.jpg',
+      name: 'Noah Brooks',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 12,
+      pic: 'https://i.pinimg.com/564x/50/c8/5a/50c85add95a0c88e0b2b63f8cf4fcdf8.jpg',
+      name: 'Mia Wallace',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 13,
+      pic: 'https://i.pinimg.com/564x/a9/b2/fd/a9b2fdb12dcf8a29b82b1ba291bcefac.jpg',
+      name: 'Logan Price',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 14,
+      pic: 'https://i.pinimg.com/564x/19/e1/e9/19e1e91b0fec6d356c06aec57d98b4e0.jpg',
+      name: 'Isabella Sanchez',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
+    {
+      id: 15,
+      pic: 'https://i.pinimg.com/564x/22/01/12/220112ce9c3967e2022ce13673a9d4f6.jpg',
+      name: 'Alexander Lee',
+      text: 'Fusce id fermentum quam. Integer eget semper purus. Cras vestibulum suscipit turpis nec venenatis. Sed tempus nunc id elit aliquet, vel luctus ligula condimentum.'
+    },
   ];
   
  
 // CALLING FROM LOCAL STORAGE
 let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localStorage.getItem('wishlist')) : [];
+let reviews = JSON.parse(localStorage.getItem('reviews')) ? JSON.parse(localStorage.getItem('reviews')) : [];
 let single_product = [];
 let filteredItems =[]
 // let single_product_info = JSON.parse(localStorage.getItem('single_product')) ? JSON.parse(localStorage.getItem('single_product')) : [];
@@ -405,53 +466,18 @@ wish_length.innerHTML =  `( ${wishlist.length } )`
  
 
 
-//Cart stuff
-function cartItems(){ 
-    cart.forEach((element,index )=> {
-        document.querySelector('.cart_output').innerHTML+=
-        `
-        <div class="card" style="width: 100%;">
-        <div class="row">
-          <div class="del_holder">
-            <button  style="float: right; margin-right: 10px;background-color:white;border:none;" onclick='Remove(${index})' ><i class="bi bi-trash3"></i></button>
-          </div>
-        </div>
-        
-       <div class="row">
-        <div class="col">
-          <img src="${element.image}" width="40%" alt="">
-        </div>
-        <div class="col">
-          <p>${element.name}</p>
-        </div>
-        <div class="col">
-        ${element.price}
-      <div class="col quantityDisplay">
-        x ${element.quantity}
-      </div>
-      <div class="col">
-      <button class="btn" onclick="quantAdd(${index})"><i class="bi bi-plus"></i></button>
-      <button class="btn" onclick="quantSub(${index})"><i class="bi bi-dash"></i></button>
-      </div>
-        </div>
-       </div> 
-      </div>
-        `
-    });
-}
-cartItems()
-
+ 
 
 function Remove(index) {
     let position = cart[index].id
     let target = cart.findIndex(obj => obj.id === position)
      cart.splice(target,1)
-
      localStorage.setItem("cart",JSON.stringify(cart))
 
      cart = cart
     cartItems()    //  location.reload();
  }
+ 
 function total(){
     let cartTotal = cart.reduce((accumulator, cart) => {
       let price = parseFloat(cart.price) * parseFloat(cart.quantity);
@@ -463,25 +489,18 @@ function total(){
 total()
 //--------------
 //---------------
-review.forEach(element => {
-    document.querySelector('.review').innerHTML += `
-        <div class="card">
-            <center>
-                <h5>${element.name}</h5>
-                <img src="${element.pic}" alt="">
-            </center>
-            <div class="star-holder">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            </div>
-            <br>
-            <p>"${element.text}"</p>
-           
-        </div>
-    `;
+review.slice(0, 5).forEach(element => {
+  document.querySelector('.review').innerHTML += `
+    <div class="card">
+      <center>
+        <h5>${element.name}</h5>
+        <img src="${element.pic}" alt="">
+      </center>
+       
+      <br>
+      <p>"${element.text}"</p>
+    </div>
+  `;
 });
         //DISPLAY OF PRODUCTS
 list.forEach((element, index) => {
@@ -672,24 +691,7 @@ searched.innerHTML=`
 
 document.querySelector('.searchbar').addEventListener('input',search)
  
-//ADD TO WISHLIST
-function add_to_wishlist(index){
-
-    wishlist.push(// push to wishlist
-        {
-            //referencing from list
-            id: list[index].id,
-            name: list[index].name,
-            price: list[index].price,
-            image:list[index].image
-        });
-        
-//sending to wishlist storage
-    localStorage.setItem("wishlist",JSON.stringify(wishlist))
-    
-    wish_length.innerHTML = wishlist.length
-
-}
+ 
 document.querySelector('.btn-close').addEventListener('click',clearSingleProd)
 function quantAdd(index){
     // increase quantity
@@ -710,3 +712,41 @@ function quantSub(index){
     document.querySelectorAll('.card .quantityDisplay')[index].innerHTML ='x '+ cart[index].quantity;
     total()
 }
+
+function reviewinputview(){
+let text =  document.querySelector('.review-text').value
+let reviewLength = reviews.length
+
+review.push(
+  {
+    pic: 'https://i.pinimg.com/564x/7c/06/76/7c0676b215b591d2c6043596da128f96.jpg',
+    name: 'you',
+    text: text
+  }
+)
+localStorage.setItem("reviews",JSON.stringify(review))
+
+alert('Review added successfully✅')
+}
+reviews.forEach((element, index) => {
+  document.querySelector('.review-display').innerHTML += `
+  <div class="review-card">
+  <div class="row">
+  
+  <div>
+  <div class="row">
+    <div class="col-2">
+    <br>
+   
+      <img src="${element.pic}" alt="${element.name}">
+    </div>
+    <div class="col-9 text-center">
+      <p>${element.name}</p>
+
+      <p>${element.text}</p>
+    </div>
+  </div>
+</div>
+  `
+});
+

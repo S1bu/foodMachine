@@ -1,6 +1,6 @@
-body{
-    font-family:var(---font-family) 
-}
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+ 
+
 *{
     font-family: var(---font-family);
 }
@@ -8,7 +8,7 @@ body{
     ---background_color: wheat;
     ---secondary:#0D0D0D;
     ---Third-color:ghostwhite;
-    ---font-family: Georgia, 'Times New Roman', Times, serif
+    ---font-family: "Edu AU VIC WA NT Hand", cursive;
 
 }
 /* -------header----------- */
@@ -583,4 +583,77 @@ justify-content: center;
 .cart .card button{
     background-color: white;
     border:1px solid gray ;
+}
+
+.review-card img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius:100px ;
+    border: var(---background_color) 5px solid;
+ 
+}
+
+.review-card{
+    border:var(---Third-color) 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    margin:1%;
+}
+.review-card .col-2{
+    width: 20%;
+}
+
+.review-card .col-9{
+margin-left: 3%;
+color: white;
+font-size: 10px;
+}
+
+.offcanvas-header{
+    background-color: var(---secondary);
+    color: white;
+}
+/* .offcanvas-title{
+    
+} */
+.btn-close{
+    color: white;
+}
+.review-more{
+    color:blue;
+    cursor: pointer;
+    text-decoration:solid;
+}
+.offcanvas-body{
+    background-color: var(---secondary);
+}
+
+ 
+.offcanvas-footer{
+    background-color: var(---secondary);
+}
+
+.offcanvas-footer input{
+padding: 9px;
+width: 90%;
+background-color: var(---secondary);
+border: 1px solid white;
+border-radius: 10px;
+color: white;
+margin-bottom: 2%;
+}
+
+.offcanvas-footer button{
+    float: right;
+    padding: 9px;
+    border-radius: 10px;
+    border:black 1px solid;
+    width: 10%;
+}
+
+.offcanvas-footer button:hover{
+    background-color:var(---secondary);
+    color: white;
+    border: 1px solid white;
 }

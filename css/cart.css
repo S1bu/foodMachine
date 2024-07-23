@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+ 
+:root{
+        ---background_color: wheat;
+        ---secondary:#0D0D0D;
+        ---Third-color:ghostwhite;
+        ---font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(---font-family);
 }
+
+ 
 .nav{
-    background-color: wheat;
-    
+        background-color: var(---background_color);
         display: grid;
         grid-template-columns: auto auto auto auto auto;
         justify-content: space-around;
@@ -16,12 +27,12 @@
 .nav
 a{
     text-decoration: none;
-    color: black;
+    color: var(---secondary);
     font-weight:800;
 
 }
 .main{
-    background-color: wheat;
+    background-color: var(---background_color);
     height: 100vh;
 }
 
@@ -48,13 +59,14 @@ width: 45%;
     box-shadow: 10px 10px 1px;
     position: fixed;
     overflow: scroll;
-    height: 85vh;
+    height: 82vh;
     overflow-x:hidden;
 }
  
 
 img{
-    width: 100px;
+    width: 80px;
+    object-fit: contain;
 }
 
 .display{
@@ -76,7 +88,7 @@ transition: 1s;
 }
 
 .container{
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     margin: 10px;
 }
 
