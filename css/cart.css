@@ -14,7 +14,9 @@
     box-sizing: border-box;
     font-family: var(---font-family);
 }
-
+body{
+    background-color: var(---background_color) !important;
+}
  
 .nav{
         background-color: var(---background_color);
@@ -33,34 +35,17 @@ a{
 }
 .main{
     background-color: var(---background_color);
-    height: 100vh;
+    height: auto;
 }
 
-.right , .left{
-width: 45%;
-}
-
-.right{
-    float: right;
-    border: 2px solid black;
-    border-radius: 10px ;
-    object-fit: contain;
-    border: 2px solid black;
-    box-shadow: 10px 10px 1px;
-}
 
 .left{
-    margin-left: 5px;
-    float: left;
-    border: 2px solid black;
+    width: 70%;
+   margin: 0 15%;
+    /* float: left; */
     border-radius: 10px ;
     object-fit: contain;
-    border: 2px solid black;
-    box-shadow: 10px 10px 1px;
-    position: fixed;
-    overflow: scroll;
-    height: 82vh;
-    overflow-x:hidden;
+
 }
  
 
@@ -92,4 +77,19 @@ transition: 1s;
     margin: 10px;
 }
 
+
+.container .add button{
+padding: 5px;
+background-color: var(---background_color);
+color: black;
+border: 1px solid black;
+border-radius: 10px;
  
+}
+.container .subtract button{
+    padding: 5px;
+    background-color: var(---background_color);
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    }

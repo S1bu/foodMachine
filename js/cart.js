@@ -1,4 +1,3 @@
-
 // let cart = JSON.parse(localStorage.getItem('cart')) ?? [];
 let cart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localStorage.getItem('wishlist')) : [];
@@ -12,7 +11,6 @@ let wish_length = document.querySelector('.wish_length')
 
 //DISPLAY LENGTHS
 cart_length.innerHTML = cart.length
-wish_length.innerHTML = wishlist.length
 
 // DISPLAY CART
 if(cart.length == 0){
@@ -28,8 +26,20 @@ if(cart.length == 0){
           <img src="${element.image}" alt="${element.name}+' image'">
     </div>
     <div class="col">
-      <p>${element.name}</p>
-      <p>${element.price}</p>
+      <p>${element.name} X <span class="quantityDisplay">${element.quantity}</p>
+      <p class="cart_price">${element.price}</p>
+    </div>
+    <div class="col">
+    <div class="add">
+    <button onclick="quantAdd(${index})">
+<i class="bi bi-plus"></i>
+    </button>
+    </div>
+    <div class="subtract">
+     <button onclick="quantSub(${index})">
+    <i class="bi bi-dash"></i>
+    </button>
+    </div>
     </div>
     <div class="col">
           <button class="btn-trash" onclick="Remove(${index})">
@@ -47,7 +57,6 @@ function Remove(index) {
      cart.splice(target,1)
 
      localStorage.setItem("cart",JSON.stringify(cart))
-console.log('clicked')
      cart = cart
   
       location.reload();
@@ -75,7 +84,7 @@ function add_to_wishlist(index){
 document.querySelector('.items').innerHTML=`Items X ${cart.length}`
 function total(){
     let cartTotal = cart.reduce((accumulator, cart) => {
-      let price = parseFloat(cart.price);
+      let price = parseFloat(cart.total_with_quantity);
       return accumulator + price;
     }, 0);
  
@@ -89,11 +98,51 @@ function clearStorage(){
     location.reload();
 }
 // EVENT LISTENERS
-clearButton.addEventListener("click",clearStorage)
+// clearButton.addEventListener("click",clearStorage)
 
-function purchase() {
-    alert(`${list}`)
+
+// document.querySelector('.purchase').addEventListener('click',purchase)
+// render the price
+
+
+
+function quantAdd(index){
+    // increase quantity
+cart[cart.findIndex(obj => obj.id === cart[index].id)]=
+{
+    'id': cart[index].id,
+    'name': cart[index].name, 
+    'price': cart[index].price,
+    'image': cart[index].image,
+    'quantity': parseInt(cart[index].quantity ) + 1,
+    'total_with_quantity': (parseFloat(cart[index].total_with_quantity)+ parseFloat(cart[index].price)).toFixed(2)
+}//update cart quantity
+    localStorage.setItem("cart", JSON.stringify(cart));
+    // updating the UX 
+    document.querySelectorAll('.quantityDisplay')[index].innerHTML = cart[index].quantity;
+    document.querySelectorAll('.cart_price')[index].innerHTML = cart[index].total_with_quantity
+    total()
 }
+function quantSub(index){
+    if( cart[index].quantity != 1){
+    // decrease quantity
+    cart[cart.findIndex(obj => obj.id === cart[index].id)]=
+{
+    'id': cart[index].id,
+    'name': cart[index].name, 
+    'price': cart[index].price,
+    'image': cart[index].image,
+    'quantity': parseInt(cart[index].quantity ) - 1,
+    'total_with_quantity': (parseFloat(cart[index].total_with_quantity) - parseFloat(cart[index].price)).toFixed(2)
+}
+    }
 
+    //update cart quantity
+    localStorage.setItem("cart", JSON.stringify(cart));
+      // updating the UX 
+      document.querySelectorAll('.quantityDisplay')[index].innerHTML = cart[index].quantity;
+      document.querySelectorAll('.cart_price')[index].innerHTML = cart[index].total_with_quantity
+    total()
 
-document.querySelector('.purchase').addEventListener('click',purchase)
+    console.log('substract is clicked')
+}
