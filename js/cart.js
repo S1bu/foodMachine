@@ -20,10 +20,10 @@ if(cart.length == 0){
 }else{
     cart.forEach((element,index) => {
         display.innerHTML += `
-<div class="container text-center">
+<div class="container" >
   <div class="row align-items-start">
     <div class="col">
-          <img src="${element.image}" alt="${element.name}+' image'">
+          <img src="${element.image}" alt="${element.name}">
     </div>
     <div class="col">
       <p>${element.name} X <span class="quantityDisplay">${element.quantity}</p>
@@ -35,6 +35,7 @@ if(cart.length == 0){
 <i class="bi bi-plus"></i>
     </button>
     </div>
+    <br>
     <div class="subtract">
      <button onclick="quantSub(${index})">
     <i class="bi bi-dash"></i>
@@ -55,11 +56,10 @@ function Remove(index) {
     let position = cart[index].id
     let target = cart.findIndex(obj => obj.id === position)
      cart.splice(target,1)
-
      localStorage.setItem("cart",JSON.stringify(cart))
-     cart = cart
-  
+    //  new_cart = cart
       location.reload();
+      quantityTotal()   
  }
 // FUNCTIONS
 function add_to_wishlist(index){
@@ -81,7 +81,7 @@ function add_to_wishlist(index){
     wish_length.innerHTML = wishlist.length
 
 }
-document.querySelector('.items').innerHTML=`Items X ${cart.length}`
+
 function total(){
     let cartTotal = cart.reduce((accumulator, cart) => {
       let price = parseFloat(cart.total_with_quantity);
@@ -90,8 +90,18 @@ function total(){
  
     totalPrice.innerHTML=`<span class="price">Total: R${cartTotal.toFixed(2)}</span></h5>`
 }
+
+function quantityTotal(){
+    let quantityTotal = cart.reduce((accumulator, cart) => {
+        let quantity = parseFloat(cart.quantity);
+        return accumulator + quantity;
+      }, 0);
+
+      document.querySelector('.items').innerHTML=`<p>Items X ${quantityTotal}</p>`
+}
 // CALLING FUNCTIONS
 total()
+quantityTotal()
 // CLEAR LOCAL STORAGE 
 function clearStorage(){
     localStorage.removeItem("cart")
@@ -122,6 +132,7 @@ cart[cart.findIndex(obj => obj.id === cart[index].id)]=
     document.querySelectorAll('.quantityDisplay')[index].innerHTML = cart[index].quantity;
     document.querySelectorAll('.cart_price')[index].innerHTML = cart[index].total_with_quantity
     total()
+    quantityTotal()
 }
 function quantSub(index){
     if( cart[index].quantity != 1){
@@ -143,6 +154,6 @@ function quantSub(index){
       document.querySelectorAll('.quantityDisplay')[index].innerHTML = cart[index].quantity;
       document.querySelectorAll('.cart_price')[index].innerHTML = cart[index].total_with_quantity
     total()
+    quantityTotal()
 
-    console.log('substract is clicked')
 }

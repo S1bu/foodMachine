@@ -275,105 +275,293 @@ const list = [
     "quantity": 1,
     "total_with_quantity": "8.99"
   },
-  {
-    "id": 26,
-    "name": "Water",
-    "image": "https://i.ibb.co/TcfvM1j/water.png",
-    "price": "2.99",
-    "category": "drinks",
-    "description": "Stay refreshed with our crisp and clear bottled water, the perfect companion for any meal.",
-    "ingredients": ["Water"],
-    "quantity": 1,
-    "total_with_quantity": "2.99"
-  },
-  {
-    "id": 27,
-    "name": "Soft Drink",
-    "image": "https://i.ibb.co/FwtDqhB/Riverdale-milkshake.png",
-    "price": "3.99",
-    "category": "drinks",
-    "description": "Quench your thirst with our selection of popular soft drinks, available in a range of flavors.",
-    "ingredients": ["Soft drink syrup", "Carbonated water"],
-    "quantity": 1,
-    "total_with_quantity": "3.99"
-  },
-  {
-    "id": 28,
-    "name": "Juice",
-    "image": "https://i.ibb.co/09CTJZ7/score.png",
-    "price": "4.99",
-    "category": "drinks",
-    "description": "Sip on a refreshing glass of 100% fruit juice, made with the finest ingredients and no added sugars.",
-    "ingredients": ["Fruit", "Water"],
-    "quantity": 1,
-    "total_with_quantity": "4.99"
-  },
-  {
-    "id": 29,
-    "name": "Coffee",
-    "image": "https://i.ibb.co/540Tnvd/coke.png",
-    "price": "2.99",
-    "category": "drinks",
-    "description": "Kickstart your day with a rich and smooth cup of coffee, roasted to perfection.",
-    "ingredients": ["Coffee beans", "Water"],
-    "quantity": 1,
-    "total_with_quantity": "2.99"
-  },
-  {
-    "id": 30,
-    "name": "Tea",
-    "image": "https://i.ibb.co/1QfdsBR/corona.png",
-    "price": "2.99",
-    "category": "drinks",
-    "description": "Unwind with a soothing cup of tea, available in a range of flavors and blends.",
-    "ingredients": ["Tea leaves", "Water"],
-    "quantity": 1,
-    "total_with_quantity": "2.99"
-  },
-  {
-    "id": 31,
-    "name": "Craft Beer",
-    "image": "https://i.ibb.co/ccdgJ4r/fanta-orange.png",
-    "price": "7.99",
-    "category": "drinks",
-    "description": "Discover a new favorite with our selection of craft beers, featuring unique flavors and brews.",
-    "ingredients": ["Malted barley", "Hops", "Yeast", "Water"],
-    "quantity": 1,
-    "total_with_quantity": "7.99"
-  },
-  {
-    "id": 32,
-    "name": "Heineken",
-    "image": "https://i.ibb.co/ts4v1qF/heinken.png",
-    "price": "9.99",
-    "category": "drinks",
-    "description": "Indulge in a glass of fine wine, carefully curated from top vineyards around the world.",
-    "ingredients": ["Grapes", "Yeast"],
-    "quantity": 1,
-    "total_with_quantity": "9.99"
-  },
-  {
-    "id": 33,
-    "name": "Cocktail",
-    "image": "https://i.ibb.co/rGk1yDb/rumberry-cocktail.png",
-    "price": "12.99",
-    "category": "drinks",
-    "description": "Experience the art of mixology with our handcrafted cocktails, featuring premium spirits and fresh ingredients.",
-    "ingredients": ["Spirits", "Mixers", "Garnishes"],
-    "quantity": 1,
-    "total_with_quantity": "12.99"
-  },
-  {
-    "id": 34,
-    "name": "Mocktail",
-    "image": "https://i.ibb.co/f4GY0bf/Perfect-Vanilla-Bean-Iced-Coffee.png",
-    "price": "8.99",
-    "category": "drinks",
-    "description": "Enjoy a refreshing mocktail, expertly crafted with flavorful ingredients and no alcohol.",
-    "ingredients": ["Juice", "Soda", "Garnishes"],
-    "quantity": 1,
-    "total_with_quantity": "8.99"
-  }
+    {
+      "id": 8,
+      "name": "Chocolate Oreo Pudding Delight",
+      "image": "https://i.ibb.co/Tv85T1w/Chocolate-Oreo-Pudding-Delight.png",
+      "price": "9.99",
+      "category": "dessert",
+      "description": "Indulge your sweet tooth with layers of rich chocolate pudding and crushed Oreo cookies, a heavenly dessert.",
+      "ingredients": ["Chocolate pudding", "Oreo cookies", "Whipped cream"],
+      "quantity": 1,
+      "total_with_quantity": "9.99"
+    },
+    {
+      "id": 22,
+      "name": "Beef Burgers x 6",
+      "image": "https://i.ibb.co/7pyhHcB/beef-burgers.png",
+      "price": "29.99",
+      "category": "Special",
+      "description": "Gather your friends and family for a feast with our pack of six juicy beef burgers, perfect for grilling up a storm.",
+      "ingredients": ["Beef patties", "Buns", "Lettuce", "Tomato", "Cheese", "Pickles"],
+      "quantity": 6,
+      "total_with_quantity": "29.99"
+    },
+    {
+      "id": 23,
+      "name": "Custard & Jelly x2",
+      "image": "https://i.ibb.co/dc8VyC1/custurad-and-jelly.png",
+      "price": "19.99",
+      "category": "Special",
+      "description": "Enjoy a nostalgic treat with our classic custard and jelly cups, a sweet and creamy delight.",
+      "ingredients": ["Custard", "Jelly"],
+      "quantity": 2,
+      "total_with_quantity": "19.99"
+    },
+    {
+      "id": 24,
+      "name": "Moroccan Chicken Wrap x",
+      "image": "https://i.ibb.co/3fwmZMK/moroccan-chicken-wraps.png",
+      "price": "15.99",
+      "category": "Special",
+      "description": "Transport your taste buds to Morocco with our flavorful chicken wrap, filled with exotic spices and fresh ingredients.",
+      "ingredients": ["Chicken", "Tortilla", "Spices", "Vegetables"],
+      "quantity": 1,
+      "total_with_quantity": "15.99"
+    },
+    {
+      "id": 25,
+      "name": "Blueberry Pancake",
+      "image": "https://i.postimg.cc/VLXMKQ0W/blue-berry-pancake.jpg",
+      "price": "5.99",
+      "category": "dessert",
+      "description": "Fluffy pancakes topped with fresh blueberries and a drizzle of maple syrup.",
+      "ingredients": ["Flour", "Blueberries", "Maple syrup", "Eggs", "Milk", "Baking powder"],
+      "quantity": 1,
+      "total_with_quantity": "5.99"
+    },
+    {
+      "id": 26,
+      "name": "Carrot Soup",
+      "image": "https://i.postimg.cc/RhkFcFTx/carrot-soup.jpg",
+      "price": "4.99",
+      "category": "meal",
+      "description": "A warm and comforting bowl of creamy carrot soup.",
+      "ingredients": ["Carrots", "Onions", "Garlic", "Vegetable broth", "Cream", "Spices"],
+      "quantity": 1,
+      "total_with_quantity": "4.99"
+    },
+    {
+      "id": 27,
+      "name": "Cherry Sundae",
+      "image": "https://i.postimg.cc/8PgfJKXJ/cherry-sundae.jpg",
+      "price": "6.99",
+      "category": "dessert",
+      "description": "A delightful sundae topped with cherries and whipped cream.",
+      "ingredients": ["Ice cream", "Cherries", "Whipped cream", "Cherry syrup"],
+      "quantity": 1,
+      "total_with_quantity": "6.99"
+    },
+    {
+      "id": 28,
+      "name": "Chicken Alfredo Sauce",
+      "image": "https://i.postimg.cc/Jn9DQP1F/chicken-alfedo-sauce.jpg",
+      "price": "12.99",
+      "category": "meal",
+      "description": "A creamy Alfredo sauce with tender chicken pieces.",
+      "ingredients": ["Chicken", "Cream", "Parmesan cheese", "Garlic", "Butter", "Pasta"],
+      "quantity": 1,
+      "total_with_quantity": "12.99"
+    },
+    {
+      "id": 29,
+      "name": "Chocolate and Oreo Donuts",
+      "image": "https://i.postimg.cc/nL3h3T1k/chocolate-and-oreo-donuts.jpg",
+      "price": "3.99",
+      "category": "dessert",
+      "description": "Delicious donuts topped with chocolate glaze and Oreo crumbs.",
+      "ingredients": ["Flour", "Sugar", "Cocoa powder", "Oreo cookies", "Butter", "Eggs"],
+      "quantity": 1,
+      "total_with_quantity": "3.99"
+    },
+    {
+      "id": 30,
+      "name": "Chocolate Chip Cookie Sandwich",
+      "image": "https://i.postimg.cc/zBMXrB6H/chocolate-chip-cookie-sandwich.jpg",
+      "price": "2.99",
+      "category": "dessert",
+      "description": "Two chocolate chip cookies with a creamy filling in between.",
+      "ingredients": ["Chocolate chips", "Flour", "Sugar", "Butter", "Eggs", "Cream"],
+      "quantity": 1,
+      "total_with_quantity": "2.99"
+    },
+    {
+      "id": 31,
+      "name": "Chocolate Chip Muffins",
+      "image": "https://i.postimg.cc/v8g566Qj/chocolate-chip-muffins.jpg",
+      "price": "3.49",
+      "category": "dessert",
+      "description": "Moist muffins loaded with chocolate chips.",
+      "ingredients": ["Chocolate chips", "Flour", "Sugar", "Butter", "Eggs", "Baking powder"],
+      "quantity": 1,
+      "total_with_quantity": "3.49"
+    },
+    {
+      "id": 32,
+      "name": "Classic Philly Cheese Steak",
+      "image": "https://i.postimg.cc/d0VyQhH5/Classic-Philly-cheesesteak.jpg",
+      "price": "8.99",
+      "category": "meal",
+      "description": "A classic Philly cheese steak with tender beef and melted cheese.",
+      "ingredients": ["Beef", "Cheese", "Onions", "Bell peppers", "Hoagie roll"],
+      "quantity": 1,
+      "total_with_quantity": "8.99"
+    },
+    {
+      "id": 33,
+      "name": "Full English Breakfast",
+      "image": "https://i.postimg.cc/bwTnjxTG/Full-english-breakfast.jpg",
+      "price": "10.99",
+      "category": "breakfast",
+      "description": "A hearty full English breakfast with eggs, bacon, sausages, and more.",
+      "ingredients": ["Eggs", "Bacon", "Sausages", "Baked beans", "Tomatoes", "Mushrooms"],
+      "quantity": 1,
+      "total_with_quantity": "10.99"
+    },
+    {
+      "id": 34,
+      "name": "Grilled Chicken Tikka Sandwich",
+      "image": "https://i.postimg.cc/Nf8916ZN/Grilled-Chicken-Tikka-sandwich.jpg",
+      "price": "7.99",
+      "category": "meal",
+      "description": "A spicy grilled chicken tikka sandwich with fresh vegetables.",
+      "ingredients": ["Chicken", "Spices", "Bread", "Lettuce", "Tomato", "Onion"],
+      "quantity": 1,
+      "total_with_quantity": "7.99"
+    },
+    {
+      "id": 35,
+      "name": "Lasagna",
+      "image": "https://i.postimg.cc/tT1nPLHP/Lasagna.jpg",
+      "price": "9.99",
+      "category": "meal",
+      "description": "A classic Italian lasagna with layers of pasta, meat sauce, and cheese.",
+      "ingredients": ["Pasta", "Ground beef", "Tomato sauce", "Cheese", "Bechamel sauce"],
+      "quantity": 1,
+      "total_with_quantity": "9.99"
+    },
+    {
+      "id": 36,
+      "name": "Master Meal",
+      "image": "https://i.postimg.cc/YSrSNTQ0/master-meal.jpg",
+      "price": "14.99",
+      "category": "meal",
+      "description": "A hearty meal with sausages, cheese toast, potato fries, ribs, and a drumstick.",
+      "ingredients": ["Sausages", "Cheese toast", "Potato fries", "Ribs", "Drumstick"],
+      "quantity": 1,
+      "total_with_quantity": "14.99"
+    },
+    {
+      "id": 37,
+      "name": "Oreo Cupcake",
+      "image": "https://i.postimg.cc/c6Gxvzss/oreo-cupcakes.jpg",
+      "price": "3.99",
+      "category": "dessert",
+      "description": "Moist cupcakes topped with Oreo crumbs and a creamy frosting.",
+      "ingredients": ["Flour", "Sugar", "Butter", "Eggs", "Oreo cookies", "Frosting"],
+      "quantity": 1,
+      "total_with_quantity": "3.99"
+    },
+    {
+      "id": 38,
+      "name": "Peanut Butter Brownies",
+      "image": "https://i.postimg.cc/KcwRXqhp/peanut-butter-brownies.jpg",
+      "price": "4.49",
+      "category": "dessert",
+      "description": "Rich brownies with a swirl of peanut butter.",
+      "ingredients": ["Chocolate", "Peanut butter", "Flour", "Sugar", "Butter", "Eggs"],
+      "quantity": 1,
+      "total_with_quantity": "4.49"
+    },
+    {
+      "id": 39,
+      "name": "Ribs and Mashed Potatoes",
+      "image": "https://i.postimg.cc/9QtM7cRs/rib-and-mash-potatoes.jpg",
+      "price": "11.99",
+      "category": "meal",
+      "description": "Tender ribs served with creamy mashed potatoes.",
+      "ingredients": ["Ribs", "Potatoes", "Butter", "Cream", "Spices"],
+      "quantity": 1,
+      "total_with_quantity": "11.99"
+    },
+    {
+      "id": 40,
+      "name": "Ribs Burger",
+      "image": "https://i.postimg.cc/7ZDzcsg8/rib-burger.jpg",
+      "price": "8.49",
+      "category": "meal",
+      "description": "A juicy burger with tender rib meat and BBQ sauce.",
+      "ingredients": ["Rib meat", "Burger bun", "BBQ sauce", "Lettuce", "Tomato"],
+      "quantity": 1,
+      "total_with_quantity": "8.49"
+    },
+    {
+      "id": 41,
+      "name": "Roasted Butternut Soup",
+      "image": "https://i.postimg.cc/fTdkMcwz/Roasted-butternut-soup.jpg",
+      "price": "4.99",
+      "category": "meal",
+      "description": "A creamy soup made with roasted butternut squash.",
+      "ingredients": ["Butternut squash", "Onions", "Garlic", "Vegetable broth", "Cream"],
+      "quantity": 1,
+      "total_with_quantity": "4.99"
+    },
+    {
+      "id": 42,
+      "name": "Rotisserie Chicken Noodle Soup",
+      "image": "https://i.postimg.cc/BnGbbj6x/Rotisserie-chicken-noodle-soup.jpg",
+      "price": "5.99",
+      "category": "meal",
+      "description": "A comforting soup with rotisserie chicken and noodles.",
+      "ingredients": ["Chicken", "Noodles", "Carrots", "Celery", "Chicken broth"],
+      "quantity": 1,
+      "total_with_quantity": "5.99"
+    },
+    {
+      "id": 43,
+      "name": "Spaghetti and Meatballs",
+      "image": "https://i.postimg.cc/Gpgs4b6d/sphaghetti-and-meatballs.jpg",
+      "price": "8.99",
+      "category": "meal",
+      "description": "Classic spaghetti served with homemade meatballs.",
+      "ingredients": ["Spaghetti", "Ground beef", "Tomato sauce", "Parmesan cheese", "Garlic"],
+      "quantity": 1,
+      "total_with_quantity": "8.99"
+    },
+    {
+      "id": 44,
+      "name": "Strawberry Glazed Donuts",
+      "image": "https://i.postimg.cc/QCTNxDZ4/strawberry-glazed-donuts.jpg",
+      "price": "2.99",
+      "category": "dessert",
+      "description": "Fluffy donuts topped with a sweet strawberry glaze.",
+      "ingredients": ["Flour", "Sugar", "Strawberries", "Butter", "Eggs"],
+      "quantity": 1,
+      "total_with_quantity": "2.99"
+    },
+    {
+      "id": 45,
+      "name": "Strawberry Pancakes",
+      "image": "https://i.postimg.cc/L4cLk65s/strawberry-pancakes.jpg",
+      "price": "5.99",
+      "category": "dessert",
+      "description": "Fluffy pancakes topped with fresh strawberries and a drizzle of syrup.",
+      "ingredients": ["Flour", "Strawberries", "Maple syrup", "Eggs", "Milk", "Baking powder"],
+      "quantity": 1,
+      "total_with_quantity": "5.99"
+    },
+    {
+      "id": 46,
+      "name": "The Vegan Rou Jia Mo - Chinese Hamburger",
+      "image": "https://i.postimg.cc/kGKVYKGg/The-vegan-Rou-Jia-Mo-Chinese-Hamburger.jpg",
+      "price": "7.99",
+      "category": "meal",
+      "description": "A delicious vegan Chinese hamburger with a savory filling.",
+      "ingredients": ["Bun", "Vegan meat", "Spices", "Vegetables"],
+      "quantity": 1,
+      "total_with_quantity": "7.99"
+    }
+
 ]
 
 const review = [
@@ -605,6 +793,22 @@ localStorage.setItem("singleProduct",JSON.stringify(single_product))
 
      
 }
+function singleProdFiltered(index){
+  single_product.push(
+      {
+          id: filteredItems[index].id,
+          name: filteredItems[index].name, 
+          price: filteredItems[index].price,
+          image:filteredItems[index].image,
+          description:filteredItems[index].description,
+          ingredients:filteredItems[index].ingredients
+      },
+
+      );
+localStorage.setItem("singleProduct",JSON.stringify(single_product))
+
+   
+}
 //ADD TO CART 
 function add_to_cart(index) {
   let id_target = list[index].id;
@@ -634,19 +838,29 @@ function add_to_cart(index) {
   total()
 }
 function search_add_to_cart(index){
+
+
     let filteredItemlist = JSON.parse(localStorage.getItem('filteredItem')) ? JSON.parse(localStorage.getItem('filteredItem')) : [];
-    if (cart.some(item => item.id === id_target)) {
+    target_item = filteredItemlist[index].id
+
+    if (cart.some(item => item.id ===  target_item )) {
       console.log('Already in');
     } else {
+      cart.some(item => item.name == target_item  )
+       target_item = filteredItemlist[index].id - 1
+  
       cart.push(
         {
-            id: filteredItemlist[index].id,
-            name: filteredItemlist[index].name,
-            price: filteredItemlist[index].price,
-            image: filteredItemlist[index].image,
-            quantity: filteredItemlist[index].quantity
+          id: list[target_item ].id,
+          name: list[target_item ].name, 
+          price: list[target_item ].price,
+          image: list[target_item ].image,
+          quantity:list[target_item ].quantity,
+          total_with_quantity:list[target_item ].total_with_quantity
         }
         )
+
+    //     console.log(cart)
     }
     
     localStorage.setItem("cart",JSON.stringify(cart))
@@ -685,17 +899,12 @@ searched.innerHTML=`
         searched.innerHTML = '';
         // Filter items based on the search input
          filteredItems = list.filter(item => item.name.toLowerCase().includes(searchInput));
-       
+       console.log(filteredItems)
         filteredItems.forEach((item, index) => {
             searched.innerHTML+=`
 
             <div class="card" class="container-fluid row" data-aos="fade-up">
-                <div class="heart-holder" style="float:right;">
-                    <i class="bi bi-heart" style="float: right;margin-right: 2%; padding:10px"></i>
-                </div>
-                
                 <div class="row">
-
                     <div class="col">
                         <img src="${item.image}" alt="">
                     </div>
@@ -707,7 +916,7 @@ searched.innerHTML=`
                         <button onclick="search_add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button>
                         <br>
                         <br>
-                        <button onclick="singleProdSearch(${index})" class="view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-right"></i></button></button>
+                       <a href="../html/singleProd.html"><button onclick="singleProdFiltered(${index})" class="view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-right"></i></button></button></a>
                     </div>
                 </div>
             </div>

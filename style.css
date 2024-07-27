@@ -551,7 +551,7 @@ justify-content: center;
 
 .searched .card{
     width: 90%;
-    margin: 5px 4.5%;
+    margin: 1% 4.5%;
     background-color: var(---secondary);
     border: gray 1px solid;
 }
@@ -572,6 +572,7 @@ justify-content: center;
 }
 .searched img{
     width: 20%;
+    margin-bottom: 5px;
 }
 
 .searched .card button{

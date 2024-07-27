@@ -81,15 +81,21 @@ transition: 1s;
 .container .add button{
 padding: 5px;
 background-color: var(---background_color);
-color: black;
 border: 1px solid black;
 border-radius: 10px;
- 
+box-shadow: 5px 5px 1px;
+transition: 1s;
 }
 .container .subtract button{
     padding: 5px;
     background-color: var(---background_color);
-    color: black;
     border: 1px solid black;
     border-radius: 10px;
-    }
+    box-shadow: 5px 5px 1px;
+    transition: 1s;
+}
+
+.container button:hover{
+    box-shadow: none;
+    transition: 1s;
+}
