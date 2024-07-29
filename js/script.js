@@ -269,14 +269,14 @@ const list = [
     "name": "Raspberry smores Milkshake",
     "image": "https://i.ibb.co/Swt2fVG/Rasberry-milkshake.png",
     "price": "8.99",
-    "category": "Special",
+    "category": "drink",
     "description": "Indulge in the nostalgic flavors of summer with our creamy raspberry milkshake, topped with gooey marshmallows and chocolate.",
     "ingredients": ["Raspberry ice cream", "Marshmallows", "Chocolate"],
     "quantity": 1,
     "total_with_quantity": "8.99"
   },
  {
-      "id": 8,
+      "id": 26,
       "name": "Chocolate Oreo Pudding Delight",
       "image": "https://i.ibb.co/Tv85T1w/Chocolate-Oreo-Pudding-Delight.png",
       "price": "9.99",
@@ -287,40 +287,40 @@ const list = [
       "total_with_quantity": "9.99"
     },
     {
-      "id": 22,
-      "name": "Beef Burgers",
-      "image": "https://i.ibb.co/7pyhHcB/beef-burgers.png",
+      "id": 27,
+      "name": "Texas Fried Chicken",
+      "image": "https://i.pinimg.com/564x/0e/77/b2/0e77b2b589c4b0b69a6c4c40f62af936.jpg",
       "price": "29.99",
       "category": "Special",
-      "description": "Gather your friends and family for a feast with our pack of six juicy beef burgers, perfect for grilling up a storm.",
-      "ingredients": ["Beef patties", "Buns", "Lettuce", "Tomato", "Cheese", "Pickles"],
-      "quantity": 6,
+      "description": "Savor the taste of the South with our Texas Fried Chicken, crispy on the outside and juicy on the inside, seasoned with a blend of special spices.",
+      "ingredients": ["Chicken", "Flour", "Spices", "Oil"],
+      "quantity": 1,
       "total_with_quantity": "29.99"
     },
     {
-      "id": 23,
-      "name": "Custard & Jelly x2",
-      "image": "https://i.ibb.co/dc8VyC1/custurad-and-jelly.png",
+      "id": 28,
+      "name": "Giant Beef Burger",
+      "image": "https://i.pinimg.com/564x/44/b9/2f/44b92ff52badd98c4df45a80dbf9b69e.jpg",
       "price": "19.99",
       "category": "Special",
-      "description": "Enjoy a nostalgic treat with our classic custard and jelly cups, a sweet and creamy delight.",
-      "ingredients": ["Custard", "Jelly"],
-      "quantity": 2,
+      "description": "Indulge in our Giant Beef Burger, a mouth-watering delight with a massive beef patty, fresh vegetables, and a soft bun.",
+      "ingredients": ["Beef patty", "Bun", "Lettuce", "Tomato", "Cheese", "Pickles"],
+      "quantity": 1,
       "total_with_quantity": "19.99"
-    },
+    },    
     {
-      "id": 24,
-      "name": "Moroccan Chicken Wrap x",
-      "image": "https://i.ibb.co/3fwmZMK/moroccan-chicken-wraps.png",
+      "id": 29,
+      "name": "Creamy Garlic Chicken",
+      "image": "https://i.pinimg.com/564x/cb/16/2b/cb162be2b7a20bce1a6b11119dde0a00.jpg",
       "price": "15.99",
       "category": "Special",
-      "description": "Transport your taste buds to Morocco with our flavorful chicken wrap, filled with exotic spices and fresh ingredients.",
-      "ingredients": ["Chicken", "Tortilla", "Spices", "Vegetables"],
+      "description": "Enjoy a rich and flavorful creamy garlic chicken dish, cooked to perfection with tender chicken breasts in a delicious garlic cream sauce.",
+      "ingredients": ["Chicken", "Garlic", "Cream", "Herbs", "Spices"],
       "quantity": 1,
       "total_with_quantity": "15.99"
-    },
+    },    
     {
-      "id": 25,
+      "id": 30,
       "name": "Blueberry Pancake",
       "image": "https://i.postimg.cc/VLXMKQ0W/blue-berry-pancake.jpg",
       "price": "5.99",
@@ -331,7 +331,7 @@ const list = [
       "total_with_quantity": "5.99"
     },
     {
-      "id": 26,
+      "id": 31,
       "name": "Carrot Soup",
       "image": "https://i.postimg.cc/RhkFcFTx/carrot-soup.jpg",
       "price": "4.99",
@@ -342,7 +342,7 @@ const list = [
       "total_with_quantity": "4.99"
     },
     {
-      "id": 27,
+      "id": 32,
       "name": "Cherry Sundae",
       "image": "https://i.postimg.cc/8PgfJKXJ/cherry-sundae.jpg",
       "price": "6.99",
@@ -353,7 +353,7 @@ const list = [
       "total_with_quantity": "6.99"
     },
     {
-      "id": 28,
+      "id": 33,
       "name": "Chicken Alfredo Sauce",
       "image": "https://i.postimg.cc/Jn9DQP1F/chicken-alfedo-sauce.jpg",
       "price": "12.99",
@@ -364,7 +364,7 @@ const list = [
       "total_with_quantity": "12.99"
     },
     {
-      "id": 29,
+      "id": 34,
       "name": "Chocolate and Oreo Donuts",
       "image": "https://i.postimg.cc/nL3h3T1k/chocolate-and-oreo-donuts.jpg",
       "price": "3.99",
@@ -375,7 +375,7 @@ const list = [
       "total_with_quantity": "3.99"
     },
     {
-      "id": 30,
+      "id": 35,
       "name": "Chocolate Chip Cookie Sandwich",
       "image": "https://i.postimg.cc/zBMXrB6H/chocolate-chip-cookie-sandwich.jpg",
       "price": "2.99",
@@ -386,7 +386,7 @@ const list = [
       "total_with_quantity": "2.99"
     },
     {
-      "id": 31,
+      "id": 36,
       "name": "Chocolate Chip Muffins",
       "image": "https://i.postimg.cc/v8g566Qj/chocolate-chip-muffins.jpg",
       "price": "3.49",
@@ -397,7 +397,7 @@ const list = [
       "total_with_quantity": "3.49"
     },
     {
-      "id": 32,
+      "id": 37,
       "name": "Classic Philly Cheese Steak",
       "image": "https://i.postimg.cc/d0VyQhH5/Classic-Philly-cheesesteak.jpg",
       "price": "8.99",
@@ -408,7 +408,7 @@ const list = [
       "total_with_quantity": "8.99"
     },
     {
-      "id": 33,
+      "id": 38,
       "name": "Full English Breakfast",
       "image": "https://i.postimg.cc/bwTnjxTG/Full-english-breakfast.jpg",
       "price": "10.99",
@@ -419,7 +419,7 @@ const list = [
       "total_with_quantity": "10.99"
     },
     {
-      "id": 34,
+      "id": 39,
       "name": "Grilled Chicken Tikka Sandwich",
       "image": "https://i.postimg.cc/Nf8916ZN/Grilled-Chicken-Tikka-sandwich.jpg",
       "price": "7.99",
@@ -430,7 +430,7 @@ const list = [
       "total_with_quantity": "7.99"
     },
     {
-      "id": 35,
+      "id": 40,
       "name": "Lasagna",
       "image": "https://i.postimg.cc/tT1nPLHP/Lasagna.jpg",
       "price": "9.99",
@@ -441,7 +441,7 @@ const list = [
       "total_with_quantity": "9.99"
     },
     {
-      "id": 36,
+      "id": 41,
       "name": "Master Meal",
       "image": "https://i.postimg.cc/YSrSNTQ0/master-meal.jpg",
       "price": "14.99",
@@ -452,7 +452,7 @@ const list = [
       "total_with_quantity": "14.99"
     },
     {
-      "id": 37,
+      "id": 42,
       "name": "Oreo Cupcake",
       "image": "https://i.postimg.cc/c6Gxvzss/oreo-cupcakes.jpg",
       "price": "3.99",
@@ -463,7 +463,7 @@ const list = [
       "total_with_quantity": "3.99"
     },
     {
-      "id": 38,
+      "id": 43,
       "name": "Peanut Butter Brownies",
       "image": "https://i.postimg.cc/KcwRXqhp/peanut-butter-brownies.jpg",
       "price": "4.49",
@@ -474,7 +474,7 @@ const list = [
       "total_with_quantity": "4.49"
     },
     {
-      "id": 39,
+      "id": 44,
       "name": "Ribs and Mashed Potatoes",
       "image": "https://i.postimg.cc/9QtM7cRs/rib-and-mash-potatoes.jpg",
       "price": "11.99",
@@ -485,7 +485,7 @@ const list = [
       "total_with_quantity": "11.99"
     },
     {
-      "id": 40,
+      "id": 45,
       "name": "Ribs Burger",
       "image": "https://i.postimg.cc/7ZDzcsg8/rib-burger.jpg",
       "price": "8.49",
@@ -496,7 +496,7 @@ const list = [
       "total_with_quantity": "8.49"
     },
     {
-      "id": 41,
+      "id": 46,
       "name": "Roasted Butternut Soup",
       "image": "https://i.postimg.cc/fTdkMcwz/Roasted-butternut-soup.jpg",
       "price": "4.99",
@@ -507,7 +507,7 @@ const list = [
       "total_with_quantity": "4.99"
     },
     {
-      "id": 42,
+      "id": 47,
       "name": "Rotisserie Chicken Noodle Soup",
       "image": "https://i.postimg.cc/BnGbbj6x/Rotisserie-chicken-noodle-soup.jpg",
       "price": "5.99",
@@ -518,7 +518,7 @@ const list = [
       "total_with_quantity": "5.99"
     },
     {
-      "id": 43,
+      "id": 48,
       "name": "Spaghetti and Meatballs",
       "image": "https://i.postimg.cc/Gpgs4b6d/sphaghetti-and-meatballs.jpg",
       "price": "8.99",
@@ -529,7 +529,7 @@ const list = [
       "total_with_quantity": "8.99"
     },
     {
-      "id": 44,
+      "id": 49,
       "name": "Strawberry Glazed Donuts",
       "image": "https://i.postimg.cc/QCTNxDZ4/strawberry-glazed-donuts.jpg",
       "price": "2.99",
@@ -540,7 +540,7 @@ const list = [
       "total_with_quantity": "2.99"
     },
     {
-      "id": 45,
+      "id": 50,
       "name": "Strawberry Pancakes",
       "image": "https://i.postimg.cc/L4cLk65s/strawberry-pancakes.jpg",
       "price": "5.99",
@@ -551,7 +551,7 @@ const list = [
       "total_with_quantity": "5.99"
     },
     {
-      "id": 46,
+      "id": 51,
       "name": "The Vegan Rou Jia Mo - Chinese Hamburger",
       "image": "https://i.postimg.cc/kGKVYKGg/The-vegan-Rou-Jia-Mo-Chinese-Hamburger.jpg",
       "price": "7.99",
@@ -560,8 +560,249 @@ const list = [
       "ingredients": ["Bun", "Vegan meat", "Spices", "Vegetables"],
       "quantity": 1,
       "total_with_quantity": "7.99"
-    }
-
+    },
+      {
+        "id": 52,
+        "name": "Lotus Biscoff Cheesecake",
+        "image": "https://i.pinimg.com/564x/4b/08/93/4b0893b63940a3a2b1366b4ef9492c02.jpg",
+        "price": "7.99",
+        "category": "dessert",
+        "description": "A creamy cheesecake with a Lotus Biscoff crust and topping, perfect for dessert lovers.",
+        "ingredients": ["Cream cheese", "Lotus Biscoff biscuits", "Butter", "Sugar", "Vanilla extract"],
+        "quantity": 1,
+        "total_with_quantity": "7.99"
+      },
+      {
+        "id": 53,
+        "name": "Super Moist Banana Bread",
+        "image": "https://i.pinimg.com/564x/e0/bd/60/e0bd600d32022d76c5f2281ecf3a7579.jpg",
+        "price": "5.99",
+        "category": "dessert",
+        "description": "Deliciously moist banana bread with a rich banana flavor and soft texture.",
+        "ingredients": ["Bananas", "Flour", "Sugar", "Butter", "Eggs", "Baking soda"],
+        "quantity": 1,
+        "total_with_quantity": "5.99"
+      },
+      {
+        "id": 54,
+        "name": "Carrot Cake",
+        "image": "https://i.pinimg.com/736x/8e/1d/d2/8e1dd2a46d39b93fc8d11b15dcf1abd0.jpg",
+        "price": "6.99",
+        "category": "dessert",
+        "description": "A classic carrot cake with cream cheese frosting, filled with shredded carrots and spices.",
+        "ingredients": ["Carrots", "Flour", "Sugar", "Butter", "Eggs", "Cinnamon", "Cream cheese"],
+        "quantity": 1,
+        "total_with_quantity": "6.99"
+      },
+      {
+        "id": 55,
+        "name": "Fruit Cake",
+        "image": "https://i.pinimg.com/564x/f3/5f/f0/f35ff0d432c5cb4411c9a8a62aa1c796.jpg",
+        "price": "7.49",
+        "category": "dessert",
+        "description": "A rich and moist fruit cake packed with dried fruits and nuts.",
+        "ingredients": ["Dried fruits", "Nuts", "Flour", "Sugar", "Butter", "Eggs", "Spices"],
+        "quantity": 1,
+        "total_with_quantity": "7.49"
+      },
+      {
+        "id": 56,
+        "name": "Creamy Vegan Tiramisu Cheesecake",
+        "image": "https://i.pinimg.com/564x/e9/23/ec/e923ec0370edb18b16a2d9a6a0563a1e.jpg",
+        "price": "8.99",
+        "category": "dessert",
+        "description": "A vegan version of the classic tiramisu cheesecake with a creamy coffee-flavored filling.",
+        "ingredients": ["Vegan cream cheese", "Coffee", "Cocoa powder", "Vegan biscuits", "Coconut cream"],
+        "quantity": 1,
+        "total_with_quantity": "8.99"
+      },
+      {
+        "id": 57,
+        "name": "Cherry Cheesecake",
+        "image": "https://i.pinimg.com/564x/05/9f/2f/059f2f570464889d15e46b6c7d6545cb.jpg",
+        "price": "7.99",
+        "category": "dessert",
+        "description": "A delicious cheesecake topped with sweet cherry compote.",
+        "ingredients": ["Cream cheese", "Cherry compote", "Graham crackers", "Butter", "Sugar", "Vanilla extract"],
+        "quantity": 1,
+        "total_with_quantity": "7.99"
+      },
+      {
+        "id": 58,
+        "name": "Mean Steak Sandwich",
+        "image": "https://i.pinimg.com/564x/7e/7d/3f/7e7d3f704ac553de46c6925825869970.jpg",
+        "price": "9.99",
+        "category": "meal",
+        "description": "A hearty steak sandwich with tender beef, melted cheese, and fresh veggies.",
+        "ingredients": ["Beef steak", "Cheese", "Bread", "Lettuce", "Tomato", "Onion"],
+        "quantity": 1,
+        "total_with_quantity": "9.99"
+      },
+      {
+        "id": 59,
+        "name": "Juicy and Tender Pork Tenderloin Roast",
+        "image": "https://i.pinimg.com/564x/7b/3d/b5/7b3db50599f4d96068bd67c7e2312ba8.jpg",
+        "price": "12.99",
+        "category": "meal",
+        "description": "A perfectly roasted pork tenderloin that's juicy and full of flavor.",
+        "ingredients": ["Pork tenderloin", "Garlic", "Herbs", "Olive oil", "Spices"],
+        "quantity": 1,
+        "total_with_quantity": "12.99"
+      },
+      {
+        "id": 60,
+        "name": "Roasted Chicken with Garlic Herb Butter",
+        "image": "https://i.pinimg.com/564x/d3/07/2a/d3072adbd91ba3094777720a1337a34a.jpg",
+        "price": "14.99",
+        "category": "meal",
+        "description": "A succulent roasted chicken with a flavorful garlic herb butter.",
+        "ingredients": ["Chicken", "Garlic", "Herbs", "Butter", "Lemon"],
+        "quantity": 1,
+        "total_with_quantity": "14.99"
+      },
+      {
+        "id": 61,
+        "name": "Rice with Chicken and Mushroom Sauce",
+        "image": "https://i.pinimg.com/564x/18/d6/67/18d66710aea02d29b62da1564c4e2f59.jpg",
+        "price": "11.99",
+        "category": "meal",
+        "description": "A comforting dish of rice topped with chicken and a creamy mushroom sauce.",
+        "ingredients": ["Rice", "Chicken", "Mushrooms", "Cream", "Onions", "Garlic"],
+        "quantity": 1,
+        "total_with_quantity": "11.99"
+      },
+      {
+        "id": 62,
+        "name": "Creamy Chicken Pie",
+        "image": "https://i.pinimg.com/564x/e6/e3/3d/e6e33dcee3be9c9044be11bae6075170.jpg",
+        "price": "13.99",
+        "category": "meal",
+        "description": "A rich and creamy chicken pie with a flaky crust.",
+        "ingredients": ["Chicken", "Pastry", "Cream", "Vegetables", "Herbs"],
+        "quantity": 1,
+        "total_with_quantity": "13.99"
+      },
+      {
+        "id": 63,
+        "name": "British Breakfast",
+        "image": "https://i.pinimg.com/564x/3b/6f/de/3b6fde8f771c0213a74218a161914267.jpg",
+        "price": "10.99",
+        "category": "breakfast",
+        "description": "A traditional British breakfast with eggs, bacon, sausages, beans, and toast.",
+        "ingredients": ["Eggs", "Bacon", "Sausages", "Baked beans", "Toast"],
+        "quantity": 1,
+        "total_with_quantity": "10.99"
+      },
+      {
+        "id": 64,
+        "name": "Steamed Bread and Tripe",
+        "image": "https://i.pinimg.com/564x/db/ca/9c/dbca9cb0aa68bdd17e5b0eccf8f6ca7b.jpg",
+        "price": "8.99",
+        "category": "meal",
+        "description": "A traditional dish of steamed bread served with flavorful tripe.",
+        "ingredients": ["Bread", "Tripe", "Spices", "Herbs"],
+        "quantity": 1,
+        "total_with_quantity": "8.99"
+      },
+      {
+        "id": 65,
+        "name": "South African Seven Colours Meal",
+        "image": "https://i.pinimg.com/564x/89/7c/de/897cde8333c1a918bbdc00d94323cde7.jpg",
+        "price": "15.99",
+        "category": "meal",
+        "description": "A vibrant meal with creamy spinach, potato salad, beetroot, beef stew, samp, and bean salad.",
+        "ingredients": ["Creamy spinach", "Potato salad", "Beetroot", "Beef stew", "Samp", "Bean salad"],
+        "quantity": 1,
+        "total_with_quantity": "15.99"
+      } , 
+      {
+        "id": 66,
+        "name": "Oreo and Cream Milkshake",
+        "image": "https://i.pinimg.com/564x/65/18/58/65185813a04d1cfc911fa92644ec0de7.jpg",
+        "price": "5.99",
+        "category": "drink",
+        "description": "A delicious blend of Oreo cookies and creamy vanilla ice cream, topped with whipped cream and more Oreo crumbles.",
+        "ingredients": ["Oreo cookies", "Vanilla ice cream", "Milk", "Whipped cream"],
+        "quantity": 1,
+        "total_with_quantity": "5.99"
+      },
+      {
+        "id": 67,
+        "name": "Butterscotch Milkshake",
+        "image": "https://i.pinimg.com/564x/28/90/3f/28903fa9949d795384fe0d9964f7d7a9.jpg",
+        "price": "5.99",
+        "category": "drink",
+        "description": "A smooth and creamy butterscotch milkshake topped with whipped cream and butterscotch drizzle.",
+        "ingredients": ["Butterscotch syrup", "Vanilla ice cream", "Milk", "Whipped cream"],
+        "quantity": 1,
+        "total_with_quantity": "5.99"
+      },
+      {
+        "id": 68,
+        "name": "Mint Julep Milkshake",
+        "image": "https://i.pinimg.com/564x/99/c0/ca/99c0ca9af395b285a87c06dd60d4a9cb.jpg",
+        "price": "5.99",
+        "category": "drink",
+        "description": "A refreshing mint-flavored milkshake with a hint of vanilla, topped with whipped cream and a sprig of mint.",
+        "ingredients": ["Mint syrup", "Vanilla ice cream", "Milk", "Whipped cream"],
+        "quantity": 1,
+        "total_with_quantity": "5.99"
+      },
+      {
+        "id": 69,
+        "name": "Red Velvet Milkshake",
+        "image": "https://i.pinimg.com/564x/82/0c/99/820c9955aaa6c9a3afc9f6761def4492.jpg",
+        "price": "5.99",
+        "category": "drink",
+        "description": "A rich and creamy red velvet milkshake with a hint of cocoa, topped with whipped cream and red velvet crumbs.",
+        "ingredients": ["Red velvet cake mix", "Vanilla ice cream", "Milk", "Whipped cream"],
+        "quantity": 1,
+        "total_with_quantity": "5.99"
+      },
+      {
+        "id": 70,
+        "name": "Mango Milkshake",
+        "image": "https://i.pinimg.com/564x/aa/c8/e7/aac8e7495442ea137e4b6d81354d4876.jpg",
+        "price": "5.99",
+        "category": "drink",
+        "description": "A tropical mango milkshake made with fresh mangoes and creamy vanilla ice cream, topped with whipped cream.",
+        "ingredients": ["Fresh mango", "Vanilla ice cream", "Milk", "Whipped cream"],
+        "quantity": 1,
+        "total_with_quantity": "5.99"
+      },
+      {
+        "id": 71,
+        "name": "Coca-Cola",
+        "image": "https://i.pinimg.com/564x/0a/8b/2b/0a8b2bfeb8bfbd3dc3eacbe79df20c1e.jpg",
+        "price": "1.99",
+        "category": "drink",
+        "description": "A classic, refreshing Coca-Cola served ice-cold.",
+        "ingredients": ["Coca-Cola"],
+        "quantity": 1,
+        "total_with_quantity": "1.99"
+      },
+      {
+        "id": 72,
+        "name": "Blueberry Cream Soda Floats",
+        "image": "https://i.pinimg.com/564x/14/c8/57/14c85735ebbe794a78e54b39c4582ead.jpg",
+        "price": "4.99",
+        "category": "drink",
+        "description": "A delightful blueberry cream soda float made with blueberry soda and vanilla ice cream, topped with whipped cream.",
+        "ingredients": ["Blueberry soda", "Vanilla ice cream", "Whipped cream"],
+        "quantity": 1,
+        "total_with_quantity": "4.99"
+      },
+      {
+        "id": 73,
+        "name": "Caramel Frappuccino",
+        "image": "https://i.pinimg.com/564x/e6/e3/bd/e6e3bd8ec20ced2cf3d2c1791e9f7835.jpg",
+        "price": "5.99",
+        "category": "drink",
+        "description": "A rich and creamy caramel frappuccino blended with ice, topped with whipped cream and caramel drizzle.",
+        "ingredients": ["Caramel syrup", "Coffee", "Milk", "Ice", "Whipped cream"],
+        "quantity": 1,
+        "total_with_quantity": "5.99"
+      }
 ]
 
 const review = [
@@ -755,9 +996,25 @@ function number_6(){
   localStorage.setItem("number",JSON.stringify(number))
   location.reload()
 }
+function number_7(){
+  number = {
+    number :7,
+    list:"drinks"
+  } 
+  localStorage.setItem("number",JSON.stringify(number))
+  location.reload()
+}
+// Shuffle the list
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
         //DISPLAY OF PRODUCTS
 switch (number.number) {
 case 1:
+  shuffleArray(list);
     list.forEach((element, index) => {
       
       display.innerHTML += `
@@ -786,7 +1043,7 @@ case 2:
     starters = list.filter(item => item.category.includes('starters'));
     number = JSON.parse(localStorage.getItem('number'))
 
-   
+    shuffleArray(starters);
       number.list =  starters
  
     localStorage.setItem("number",JSON.stringify(number))
@@ -817,7 +1074,7 @@ case 3:
     breakfast = list.filter(item => item.category.includes('breakfast'));
     number = JSON.parse(localStorage.getItem('number'))
 
-   
+    shuffleArray(breakfast);
     number.list =  breakfast
 
   localStorage.setItem("number",JSON.stringify(number))
@@ -847,7 +1104,7 @@ case 3:
 case 4:
       meals = list.filter(item => item.category.includes('meal'));
       number = JSON.parse(localStorage.getItem('number'))
-
+      shuffleArray(meals);
    
       number.list =  meals
  
@@ -879,7 +1136,7 @@ case 5:
         desserts = list.filter(item => item.category.includes('dessert'));
         number = JSON.parse(localStorage.getItem('number'))
 
-   
+        shuffleArray(desserts);
         number.list =  desserts
    
       localStorage.setItem("number",JSON.stringify(number))
@@ -910,7 +1167,7 @@ case 6:
           Specials = list.filter(item => item.category.includes('Special'));
           number = JSON.parse(localStorage.getItem('number'))
 
-   
+          shuffleArray(Specials);
           number.list =  Specials
      
         localStorage.setItem("number",JSON.stringify(number))
@@ -919,6 +1176,40 @@ case 6:
         
 
           Specials.forEach((element, index) => {
+            display.innerHTML += `
+            <div class="card" class="container-fluid row" data-aos="fade-up">
+            <div class="wish-holder">
+            <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+            </div>
+            <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
+            <div class="card-image">
+            <img src="${element.image}">
+            </div>
+            <center>
+            <div class='row'>
+            <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+                <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+            <div>
+            
+            </center>
+            <br>
+        </div>
+            `
+        });
+          break;
+          case 7:
+          drinks = list.filter(item => item.category.includes('drink'));
+          number = JSON.parse(localStorage.getItem('number'))
+
+          shuffleArray(drinks);
+          number.list =  drinks
+     
+        localStorage.setItem("number",JSON.stringify(number))
+    
+
+        
+
+        drinks.forEach((element, index) => {
             display.innerHTML += `
             <div class="card" class="container-fluid row" data-aos="fade-up">
             <div class="wish-holder">
@@ -987,15 +1278,12 @@ localStorage.setItem("singleProduct",JSON.stringify(single_product))
 }
 //ADD TO CART 
 function add_to_cart(index) {
-  id_target = number.list[index].id -1;
- console.log(id_target)
- console.log(cart);
+  id_target = number.list[index].id - 1;
+ 
   if (cart.some(item => item.id === number.list[index].id)) {
     console.log('Already in');
   } else {
-  //   console.log(number.list);
-  // console.log( ); 
-    
+    console.log(list)
     cart.push({
       id: list[id_target].id,
       name: list[id_target].name, 
