@@ -76,4 +76,24 @@ h1{
     background-color: black;
 }
 
- 
+@media(width < 900px) {
+    .right{
+        width: 98%;
+        margin:1%;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: none;
+        padding: 10px;
+    }
+    .left{
+        width: 98%;
+        margin: 0 1%;
+    }
+    .left img{
+        width: 100%;
+        border-radius: 10px ;
+        object-fit: cover;
+        border: 2px solid black;
+        box-shadow: none;
+    }
+}

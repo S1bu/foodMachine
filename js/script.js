@@ -231,31 +231,31 @@ const list = [
     "quantity": 1,
     "total_with_quantity": "13.99"
   },
-        {
+  {
     "id": 22,
-    "name": "Beef Burgers x 6",
+    "name": "Beef Burgers",
     "image": "https://i.ibb.co/7pyhHcB/beef-burgers.png",
     "price": "29.99",
     "category": "Special",
     "description": "Gather your friends and family for a feast with our pack of six juicy beef burgers, perfect for grilling up a storm.",
     "ingredients": ["Beef patties", "Buns", "Lettuce", "Tomato", "Cheese", "Pickles"],
-    "quantity": 6,
+    "quantity": 1,
     "total_with_quantity": "29.99"
   },
   {
     "id": 23,
-    "name": "Custard & Jelly x2",
+    "name": "Custard & Jelly",
     "image": "https://i.ibb.co/dc8VyC1/custurad-and-jelly.png",
     "price": "19.99",
     "category": "Special",
     "description": "Enjoy a nostalgic treat with our classic custard and jelly cups, a sweet and creamy delight.",
     "ingredients": ["Custard", "Jelly"],
-    "quantity": 2,
+    "quantity": 1,
     "total_with_quantity": "19.99"
   },
   {
     "id": 24,
-    "name": "Moroccan Chicken Wrap x",
+    "name": "Moroccan Chicken Wrap",
     "image": "https://i.ibb.co/3fwmZMK/moroccan-chicken-wraps.png",
     "price": "15.99",
     "category": "Special",
@@ -275,7 +275,7 @@ const list = [
     "quantity": 1,
     "total_with_quantity": "8.99"
   },
-    {
+ {
       "id": 8,
       "name": "Chocolate Oreo Pudding Delight",
       "image": "https://i.ibb.co/Tv85T1w/Chocolate-Oreo-Pudding-Delight.png",
@@ -288,7 +288,7 @@ const list = [
     },
     {
       "id": 22,
-      "name": "Beef Burgers x 6",
+      "name": "Beef Burgers",
       "image": "https://i.ibb.co/7pyhHcB/beef-burgers.png",
       "price": "29.99",
       "category": "Special",
@@ -664,6 +664,7 @@ let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localSt
 let reviews = JSON.parse(localStorage.getItem('reviews')) ? JSON.parse(localStorage.getItem('reviews')) : [];
 let single_product = [];
 let filteredItems =[]
+let number = JSON.parse(localStorage.getItem('number'))
 // let single_product_info = JSON.parse(localStorage.getItem('single_product')) ? JSON.parse(localStorage.getItem('single_product')) : [];
 
 // DOCUMENT OBJECT MODEL
@@ -702,95 +703,270 @@ function Remove(index) {
     cartItems() 
  }
  
-// function total(){
-//     let cartTotal = cart.reduce((accumulator, cart) => {
-//       let price = parseFloat(cart.price) * parseFloat(cart.quantity);
-//       return accumulator + price;
-//     }, 0);
  
-//    document.querySelector('.TotalDisplay').innerHTML=`${cartTotal.toFixed(2)}`
-// }
-// total()
-//--------------
-//---------------
- 
+
+function number_1(){
+  number = {
+    number : 1,
+    list : "list"
+  } 
+  localStorage.setItem("number",JSON.stringify(number))
+  location.reload()
+  // starters = list.filter(item => item.category.includes('starters'));
+//  console.log(starters)
+}
+function number_2(){
+  number ={
+    number : 2,
+    list :"starters"
+  } 
+  localStorage.setItem("number",JSON.stringify(number))
+  location.reload()
+}
+function number_3(){
+  number ={
+    number : 3,
+    list : "breakfast"
+  } 
+  localStorage.setItem("number",JSON.stringify(number))
+  location.reload()
+}
+function number_4(){
+  number = {
+    number : 4,
+    list : "meals"
+  }
+  localStorage.setItem("number",JSON.stringify(number))
+  location.reload()
+}
+function number_5(){
+  number ={
+    number : 5,
+    list :"desserts"
+  } 
+  localStorage.setItem("number",JSON.stringify(number))
+  location.reload()
+}
+function number_6(){
+  number = {
+    number :6,
+    list:"Specials"
+  } 
+  localStorage.setItem("number",JSON.stringify(number))
+  location.reload()
+}
         //DISPLAY OF PRODUCTS
-list.forEach((element, index) => {
-    display.innerHTML += `
-    <div class="card" class="container-fluid row" data-aos="fade-up">
-    <div class="wish-holder">
-    <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+switch (number.number) {
+case 1:
+    list.forEach((element, index) => {
+      
+      display.innerHTML += `
+      <div class="card" class="container-fluid row" data-aos="fade-up">
+      <div class="wish-holder">
+      <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+      </div>
+      <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
+      <div class="card-image">
+      <img src="${element.image}">
+      </div>
+      <center>
+      <div class='row'>
+      <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+              <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+      <div>
+      
+      </center>
+      <br>
+  </div>
+      `
+  });
+
+    break;
+case 2:
+    starters = list.filter(item => item.category.includes('starters'));
+    number = JSON.parse(localStorage.getItem('number'))
+
+   
+      number.list =  starters
+ 
+    localStorage.setItem("number",JSON.stringify(number))
+
+    starters.forEach((element, index) => {
+      display.innerHTML += `
+      <div class="card" class="container-fluid row" data-aos="fade-up">
+      <div class="wish-holder">
+      <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+      </div>
+      <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
+      <div class="card-image">
+      <img src="${element.image}">
+      </div>
+      <center>
+      <div class='row'>
+      <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+       <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+      <div>
+      
+      </center>
+      <br>
+  </div>
+      `
+  });
+    break;
+case 3:
+    breakfast = list.filter(item => item.category.includes('breakfast'));
+    number = JSON.parse(localStorage.getItem('number'))
+
+   
+    number.list =  breakfast
+
+  localStorage.setItem("number",JSON.stringify(number))
+
+    breakfast.forEach((element, index) => {
+      display.innerHTML += `
+      <div class="card" class="container-fluid row" data-aos="fade-up">
+      <div class="wish-holder">
+      <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+      </div>
+      <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
+      <div class="card-image">
+      <img src="${element.image}">
+      </div>
+      <center>
+      <div class='row'>
+      <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+        <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+      <div>
+      
+      </center>
+      <br>
+  </div>
+      `
+  });
+    break;
+case 4:
+      meals = list.filter(item => item.category.includes('meal'));
+      number = JSON.parse(localStorage.getItem('number'))
+
+   
+      number.list =  meals
+ 
+    localStorage.setItem("number",JSON.stringify(number))
+
+      meals.forEach((element, index) => {
+        display.innerHTML += `
+        <div class="card" class="container-fluid row" data-aos="fade-up">
+        <div class="wish-holder">
+        <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+        </div>
+        <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
+        <div class="card-image">
+        <img src="${element.image}">
+        </div>
+        <center>
+        <div class='row'>
+        <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+                     <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+        <div>
+        
+        </center>
+        <br>
     </div>
-    <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
-    <div class="card-image">
-    <img src="${element.image}">
-    </div>
-    <center>
-    <div class='row'>
-    <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-    <div class='col'> <a href ='../html/singleProd.html'> <button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
-    <div>
+        `
+    });
+      break;
+case 5:
+        desserts = list.filter(item => item.category.includes('dessert'));
+        number = JSON.parse(localStorage.getItem('number'))
+
+   
+        number.list =  desserts
+   
+      localStorage.setItem("number",JSON.stringify(number))
+  
+        desserts.forEach((element, index) => {
+          display.innerHTML += `
+          <div class="card" class="container-fluid row" data-aos="fade-up">
+          <div class="wish-holder">
+          <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+          </div>
+          <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
+          <div class="card-image">
+          <img src="${element.image}">
+          </div>
+          <center>
+          <div class='row'>
+          <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+                  <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+          <div>
+          
+          </center>
+          <br>
+      </div>
+          `
+      });
+        break;
+case 6:
+          Specials = list.filter(item => item.category.includes('Special'));
+          number = JSON.parse(localStorage.getItem('number'))
+
+   
+          number.list =  Specials
+     
+        localStorage.setItem("number",JSON.stringify(number))
     
-    </center>
-    <br>
-</div>
-    `
-});
+
+        
+
+          Specials.forEach((element, index) => {
+            display.innerHTML += `
+            <div class="card" class="container-fluid row" data-aos="fade-up">
+            <div class="wish-holder">
+            <button class="wishbtn" onclick="add_to_wishlist(${index})"><i class="bi bi-heart"></i></button>
+            </div>
+            <center><p>${element.name}</p><span class="price">R ${element.price}</span></center>
+            <div class="card-image">
+            <img src="${element.image}">
+            </div>
+            <center>
+            <div class='row'>
+            <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
+                <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+            <div>
+            
+            </center>
+            <br>
+        </div>
+            `
+        });
+          break;
+  default:
+    break;
+}
+
 function clearSingleProd(){
     single_product = [];
-    // localStorage.setItem("single_product",JSON.stringify(single_product))
     location.reload()
 }
-// function singleProdSearch(index){
-//     single_product.push(
-//         {
-//             id: filteredItems[index].id,
-//             name: filteredItems[index].name, 
-//             price: filteredItems[index].price,
-//             image:filteredItems[index].image,
-//             description:filteredItems[index].description,
-//             ingredients:filteredItems[index].ingredients
-//         }
-       
-//         );
- 
-      
-//         single_product.forEach(element => {
-//             SinglepProductDisplay.innerHTML+=
-//         `
-//         <div class="row modal-row">
-//         <center>
-//         <h3>${element.name}</h3>
-//         </center>
-//         </div>
-    
-//         <br>
-//         <br>
-//         <div class="col text-center">
-//         <img src="${element.image}" alt="">
-//         </div>
-       
-       
-//         <p><b>Price :</b></b>${element.price}</p>
-//         <p><b>Description: </b>${element.description}</p>
-      
-//         `
-//         })
-// }
+
 function singleProd(index){
-    single_product.push(
+  let number = JSON.parse(localStorage.getItem('number'))
+  let id_target = list[index].id - 1;
+  newlist = number.list
+
+      single_product.push(
         {
-            id: list[index].id,
-            name: list[index].name, 
-            price: list[index].price,
-            image:list[index].image,
-            description:list[index].description,
-            ingredients:list[index].ingredients
+            id:newlist[id_target].id,
+            name: newlist[id_target].name, 
+            price: newlist[id_target].price,
+            image:newlist[id_target].image,
+            description:newlist[id_target].description,
+            ingredients:newlist[id_target].ingredients
         },
 
-        );
+        ); 
+ 
 localStorage.setItem("singleProduct",JSON.stringify(single_product))
-
      
 }
 function singleProdFiltered(index){
@@ -811,18 +987,22 @@ localStorage.setItem("singleProduct",JSON.stringify(single_product))
 }
 //ADD TO CART 
 function add_to_cart(index) {
-  let id_target = list[index].id;
-
-  if (cart.some(item => item.id === id_target)) {
+  id_target = number.list[index].id -1;
+ console.log(id_target)
+ console.log(cart);
+  if (cart.some(item => item.id === number.list[index].id)) {
     console.log('Already in');
   } else {
+  //   console.log(number.list);
+  // console.log( ); 
+    
     cart.push({
-      id: list[index].id,
-      name: list[index].name, 
-      price: list[index].price,
-      image: list[index].image,
-      quantity:list[index].quantity,
-      total_with_quantity:list[index].total_with_quantity
+      id: list[id_target].id,
+      name: list[id_target].name, 
+      price: list[id_target].price,
+      image: list[id_target].image,
+      quantity:list[id_target].quantity,
+      total_with_quantity:list[id_target].total_with_quantity
 
     });
     
@@ -835,7 +1015,7 @@ function add_to_cart(index) {
   }
  
 //   location.reload()
-  total()
+ 
 }
 function search_add_to_cart(index){
 

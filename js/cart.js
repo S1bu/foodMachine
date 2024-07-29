@@ -27,7 +27,7 @@ if(cart.length == 0){
     </div>
     <div class="col">
       <p>${element.name} X <span class="quantityDisplay">${element.quantity}</p>
-      <p class="cart_price">${element.price}</p>
+      <p class="cart_price">R ${element.price}</p>
     </div>
     <div class="col">
     <div class="add">
