@@ -73,8 +73,9 @@ transition: 1s;
 }
 
 .container{
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     margin: 10px;
+    padding-bottom:1%;
 }
 
 
@@ -103,7 +104,9 @@ transition: 1s;
 @media(width < 900px) {
     .container{
 /* width: 99%; */
+bottom: 1px solid black;
         margin: 1px 5%;
+        
     }
     .left{
         width: 98%;
