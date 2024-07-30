@@ -516,6 +516,9 @@ justify-content: center;
     width: 90%;
     display:flex;
 }
+.searchbar{
+    width: 90%;
+}
 
 } 
 
@@ -677,5 +680,14 @@ background-color: var(---secondary);
     background-color: var(---secondary);
     border: none;
     color: var(---Third-color);
+ }
+ 
+ .dropdown-menu{
+    background-color: var(---secondary)!important; 
+    border: 1px solid white !important;
+ }
+
+ .dropdown-menu li{
+    margin: 10px 0;
  }
  

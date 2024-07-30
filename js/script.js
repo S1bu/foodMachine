@@ -930,7 +930,8 @@ cart_length.innerHTML = `( ${cart.length} )`
 cart_length_2.innerHTML =`( ${cart.length} )`
 
  
-
+// if(number.list)
+console.log(typeof(number.list))
 
  
 
