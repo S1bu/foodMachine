@@ -1070,7 +1070,7 @@ case 2:
       <center>
       <div class='row'>
       <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-       <div class='col'><a href="../html/singleProd.html"><><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+       <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
       <div>
       
       </center>
@@ -1465,7 +1465,3 @@ if(reviews.length != 0){
 }else{
   location.reload()
 }
- 
-
-
-
