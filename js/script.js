@@ -804,7 +804,6 @@ const list = [
         "total_with_quantity": "5.99"
       }
 ]
-
 const review = [
   {
     id: 1,
@@ -940,7 +939,6 @@ function Remove(index) {
     let target = cart.findIndex(obj => obj.id === position)
      cart.splice(target,1)
      localStorage.setItem("cart",JSON.stringify(cart))
-
      cart = cart
     cartItems() 
  }
@@ -954,8 +952,7 @@ function number_1(){
   } 
   localStorage.setItem("number",JSON.stringify(number))
   location.reload()
-  // starters = list.filter(item => item.category.includes('starters'));
-//  console.log(starters)
+  
 }
 function number_2(){
   number ={
@@ -1015,8 +1012,16 @@ function shuffleArray(array) {
         //DISPLAY OF PRODUCTS
 switch (number.number) {
 case 1:
-  shuffleArray(list);
-    list.forEach((element, index) => {
+// 2
+number = JSON.parse(localStorage.getItem('number'))
+  // 3
+  // shuffleArray(list);
+  // 4
+  number.list =  list
+  // 5
+  localStorage.setItem("number",JSON.stringify(number))
+
+  list.forEach((element, index) => {
       
       display.innerHTML += `
       <div class="card" class="container-fluid row" data-aos="fade-up">
@@ -1027,10 +1032,9 @@ case 1:
       <div class="card-image">
       <img src="${element.image}">
       </div>
-      <center>
       <div class='row'>
       <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-              <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+       <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
       <div>
       
       </center>
@@ -1041,12 +1045,16 @@ case 1:
 
     break;
 case 2:
+  //filtering the starter items
+  // 1
     starters = list.filter(item => item.category.includes('starters'));
+    // 2
     number = JSON.parse(localStorage.getItem('number'))
-
-    shuffleArray(starters);
+    // 3
+    // shuffleArray(starters); 
+    // 4
       number.list =  starters
- 
+//  5
     localStorage.setItem("number",JSON.stringify(number))
 
     starters.forEach((element, index) => {
@@ -1062,7 +1070,7 @@ case 2:
       <center>
       <div class='row'>
       <div class='col'><button class="button" onclick="add_to_cart(${index})"><i class="bi bi-bag-plus"></i></button></div>
-       <div class='col'><a href="../html/singleProd.html"><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
+       <div class='col'><a href="../html/singleProd.html"><><button class="button" onclick="singleProd(${index})" ><i class="bi bi-arrow-right"></i></button></a></div>
       <div>
       
       </center>
@@ -1075,7 +1083,7 @@ case 3:
     breakfast = list.filter(item => item.category.includes('breakfast'));
     number = JSON.parse(localStorage.getItem('number'))
 
-    shuffleArray(breakfast);
+    // shuffleArray(breakfast);
     number.list =  breakfast
 
   localStorage.setItem("number",JSON.stringify(number))
@@ -1105,7 +1113,7 @@ case 3:
 case 4:
       meals = list.filter(item => item.category.includes('meal'));
       number = JSON.parse(localStorage.getItem('number'))
-      shuffleArray(meals);
+      // shuffleArray(meals);
    
       number.list =  meals
  
@@ -1137,7 +1145,7 @@ case 5:
         desserts = list.filter(item => item.category.includes('dessert'));
         number = JSON.parse(localStorage.getItem('number'))
 
-        shuffleArray(desserts);
+        // shuffleArray(desserts);
         number.list =  desserts
    
       localStorage.setItem("number",JSON.stringify(number))
@@ -1168,7 +1176,7 @@ case 6:
           Specials = list.filter(item => item.category.includes('Special'));
           number = JSON.parse(localStorage.getItem('number'))
 
-          shuffleArray(Specials);
+          // shuffleArray(Specials);
           number.list =  Specials
      
         localStorage.setItem("number",JSON.stringify(number))
@@ -1202,7 +1210,7 @@ case 6:
           drinks = list.filter(item => item.category.includes('drink'));
           number = JSON.parse(localStorage.getItem('number'))
 
-          shuffleArray(drinks);
+          // shuffleArray(drinks);
           number.list =  drinks
      
         localStorage.setItem("number",JSON.stringify(number))
@@ -1242,9 +1250,13 @@ function clearSingleProd(){
 }
 
 function singleProd(index){
+  // getting the number from local storage
   let number = JSON.parse(localStorage.getItem('number'))
+  // locating the index of the item
   let id_target = list[index].id - 1;
+
   newlist = number.list
+  
 
       single_product.push(
         {
@@ -1253,11 +1265,14 @@ function singleProd(index){
             price: newlist[id_target].price,
             image:newlist[id_target].image,
             description:newlist[id_target].description,
-            ingredients:newlist[id_target].ingredients
+            ingredients:newlist[id_target].ingredients,
+            category: newlist[id_target].category
         },
-
         ); 
  
+        console.log(single_product);
+        console.log('the ID of the item: '+newlist[id_target].id);
+    console.log(newlist)
 localStorage.setItem("singleProduct",JSON.stringify(single_product))
      
 }
@@ -1280,6 +1295,7 @@ localStorage.setItem("singleProduct",JSON.stringify(single_product))
 //ADD TO CART 
 function add_to_cart(index) {
   id_target = number.list[index].id - 1;
+  console.log(id_target)
  
   if (cart.some(item => item.id === number.list[index].id)) {
     console.log('Already in');
