@@ -802,7 +802,310 @@ const list = [
         "ingredients": ["Caramel syrup", "Coffee", "Milk", "Ice", "Whipped cream"],
         "quantity": 1,
         "total_with_quantity": "5.99"
-      }
+      },
+      {
+        "id": 74,
+        "name": "Onion Rings",
+        "image": "https://i.pinimg.com/564x/74/73/18/747318b324d82ce7abc289ab51d3021d.jpg",
+        "price": 4.99,
+        "category": "starters",
+        "description": "Crispy onion rings breaded and fried to a golden brown, served with tangy dipping sauce.",
+        "ingredients": [
+        "Onions",
+        "Breading mixture",
+        "Vegetable oil",
+        "Dipping sauce"
+        ],
+        "quantity": 1,
+        "total_with_quantity": 4.99
+        },
+        {
+          "id": 75,
+          "name": "Fried Zucchini Fries",
+          "image": "https://i.pinimg.com/564x/12/4f/0c/124f0ce301276769471f7711891d57e1.jpg",
+          "price": 5.49,
+          "category": "starters",
+          "description": "Thinly sliced zucchinis breaded and fried to a crispy golden brown, served with ranch dressing.",
+          "ingredients": [
+          "Zucchinis",
+          "Breading mixture",
+          "Vegetable oil",
+          "Ranch dressing"
+          ],
+          "quantity": 1,
+          "total_with_quantity": 5.49,
+          "optionalToppings": [
+          "Parmesan cheese",
+          "Garlic aioli",
+          "Marinara sauce"
+          ]
+          },
+          {
+            "id": 76,
+            "name": "Grilled Shrimp Skewers",
+            "image": "https://i.pinimg.com/564x/1a/6d/ea/1a6dea52a8a3d263686bc06ba21ec6bf.jpg",
+            "price": 12.99,
+            "category": "starters",
+            "description": "Succulent shrimp marinated in tropical spices, grilled to perfection.",
+            "ingredients": [
+            "Shrimp",
+            "Pineapple",
+            "Onion",
+            "Bell pepper",
+            "Tropical spices"
+            ],
+            "quantity": 1,
+            "total_with_quantity": 12.99
+            }
+,
+            {
+            "id": 77,
+            "name": "Steamed Mussels",
+            "image": "https://i.pinimg.com/564x/9e/88/5f/9e885fcb081c32dcb56f4a4b43e66d73.jpg",
+            "price": 10.99,
+            "category": "starters",
+            "description": "Freshly harvested mussels steamed in white wine, garlic, and lemon.",
+            "ingredients": [
+            "Mussels",
+            "White wine",
+            "Garlic",
+            "Lemon",
+            "Herbs"
+            ],
+            "quantity": 1,
+            "total_with_quantity": 10.99
+            }
+          ,
+            {
+            "id": 78,
+            "name": "Fish Cakes",
+            "image": "https://i.pinimg.com/564x/95/7e/96/957e9677be13f22e834886bd883a2f88.jpg",
+            "price": 9.99,
+            "category": "starters",
+            "description": "Crispy fish cakes filled with cod, salmon, and spices, served with tartar sauce.",
+            "ingredients": [
+            "Cod",
+            "Salmon",
+            "Panko breadcrumbs",
+            "Spices",
+            "Tartar sauce"
+            ],
+            "quantity": 1,
+            "total_with_quantity": 9.99
+            }
+            ,
+            {
+            "id": 79,
+            "name": "Crab Cakes",
+            "image": "https://i.pinimg.com/564x/2c/b2/d8/2cb2d851b94aed48a6a91fe7beefcb56.jpg",
+            "price": 14.99,
+            "category": "starters",
+            "description": "Jumbo lump crab meat mixed with spices and pan-seared to perfection.",
+            "ingredients": [
+            "Jumbo lump crab meat",
+            "Panko breadcrumbs",
+            "Spices",
+            "Lemon",
+            "Old Bay"
+            ],
+            "quantity": 1,
+            "total_with_quantity": 14.99
+            },
+            
+            {
+            "id": 80,
+            "name": "Lobster Rolls",
+            "image": "https://i.pinimg.com/736x/b5/b9/db/b5b9db550dede3bdb5fa8e08b4a3baba.jpg)",
+            "price": 24.99,
+            "category": "meal",
+            "description": "Fresh lobster meat served on a toasted, split-top bun with lemon butter.",
+            "ingredients": [
+            "Lobster meat",
+            "Butter",
+            "Lemon",
+            "Letuce",
+            "Tomato"
+            ],
+            "quantity": 1,
+            "total_with_quantity": 24.99
+            },
+
+{
+"id": 81,
+"name": "Avocado Toast",
+"image": "https://i.pinimg.com/564x/40/c9/6d/40c96d4016f5e7bbd52910952bb10b0b.jpg",
+"price": 7.99,
+"category": "breakfast",
+"description": "Toasted sourdough topped with mashed avocado, cherry tomatoes, and feta cheese.",
+"ingredients": [
+"Avocado",
+"Sourdough bread",
+"Cherry tomatoes",
+"Feta cheese",
+"Spinach"
+],
+"quantity": 1,
+"total_with_quantity": 7.99
+}
+
+,
+
+{
+"id": 82,
+"name": "Eggs Benedict",
+"image": "https://i.pinimg.com/736x/5f/97/1f/5f971fed8fcb8872e600ced5d303aaf3.jpg",
+"price": 12.99,
+"category": "breakfast",
+"description": "Poached eggs on toasted English muffins with smoked salmon and hollandaise sauce.",
+"ingredients": [
+"Eggs",
+"English muffins",
+"Smoked salmon",
+"Hollandaise sauce",
+"Spinach"
+],
+"quantity": 1,
+"total_with_quantity": 12.99
+}
+
+,
+
+{
+"id": 83,
+"name": "Blueberry Pancakes",
+"image": "https://i.pinimg.com/564x/7c/96/c3/7c96c322e4c6cc7943fe54433f298728.jpg",
+"price": 8.99,
+"category": "breakfast",
+"description": "Fluffy pancakes loaded with fresh blueberries and topped with maple syrup.",
+"ingredients": [
+"Pancake mix",
+"Blueberries",
+"Maple syrup",
+"Butter",
+"Whipped cream"
+],
+"quantity": 1,
+"total_with_quantity": 8.99
+}
+
+,
+{
+"id": 84,
+"name": "Breakfast Burrito",
+"image": "https://i.pinimg.com/564x/16/08/74/160874a812e98adc6dfeacae874ab98e.jpg",
+"price": 9.99,
+"category": "breakfast",
+"description": "Scrambled eggs, chorizo, black beans, and cheddar wrapped in a flour tortilla.",
+"ingredients": [
+"Eggs",
+"Chorizo",
+"Black beans",
+"Cheddar cheese",
+"Flour tortilla"
+],
+"quantity": 1,
+"total_with_quantity": 9.99
+}
+,
+{
+"id": 85,
+"name": "Cinnamon French Toast",
+"image": "https://i.pinimg.com/564x/e3/73/a4/e373a4d2e285be26785035d1afaa16f4.jpg",
+"price": 10.99,
+"category": "breakfast",
+"description": "Thick-cut brioche dipped in cinnamon egg batter and grilled to perfection.",
+"ingredients": [
+"Brioche bread",
+"Eggs",
+"Cinnamon",
+"Maple syrup",
+"Whipped cream"
+],
+"quantity": 1,
+"total_with_quantity": 10.99
+},
+{
+"id": 86,
+"name": "Caramel Macchiato",
+"image": "https://i.pinimg.com/564x/3e/ac/51/3eac51b6557e961b454f1f72d9d7c2be.jpg",
+"price": 4.99,
+"category": "drink",
+"description": "Espresso, vanilla syrup, and caramel sauce topped with whipped cream.",
+"ingredients": [
+"Espresso",
+"Vanilla syrup",
+"Caramel sauce",
+"Whipped cream"
+],
+"quantity": 1,
+"total_with_quantity": 4.99
+}
+,
+{
+"id": 87,
+"name": "Mango Smoothie",
+"image": "https://i.pinimg.com/564x/d2/2c/49/d22c49a7b5309f97eb57e0dda6304a1b.jpg",
+"price": 5.99,
+"category": "drink",
+"description": "Fresh mango blended with yogurt and honey.",
+"ingredients": [
+"Mango",
+"Yogurt",
+"Honey",
+"Ice"
+],
+"quantity": 1,
+"total_with_quantity": 5.99
+}
+,
+{
+"id": 88,
+"name": "Iced Tea",
+"image": "https://i.pinimg.com/736x/c9/3d/bf/c93dbfd5325ea8ac9edce0300f4fce11.jpg",
+"price": 2.99,
+"category": "drink",
+"description": "Brewed tea served over ice.",
+"ingredients": [
+"Tea",
+"Ice"
+],
+"quantity": 1,
+"total_with_quantity": 2.99
+}
+,
+{
+"id": 89,
+"name": "Piña Colada",
+"image": "https://i.pinimg.com/564x/55/61/45/556145eeaca3b537ad1758331e32496e.jpg",
+"price": 7.99,
+"category": "drink",
+"description": "Pineapple juice, coconut cream, and rum blended together.",
+"ingredients": [
+"Pineapple juice",
+"Coconut cream",
+"Rum",
+"Pineapple wedge"
+],
+"quantity": 1,
+"total_with_quantity": 7.99
+}
+,
+{
+"id": 90,
+"name": "Hot Chocolate",
+"image": "https://i.pinimg.com/564x/cd/d3/db/cdd3db84880274327145aff48c0a3806.jpg",
+"price": 3.99,
+"category": "hot drink",
+"description": "Rich chocolate mixed with steamed milk.",
+"ingredients": [
+"Chocolate syrup",
+"Steamed milk",
+"Whipped cream"
+],
+"quantity": 1,
+"total_with_quantity": 3.99
+}       
+          
 ]
 const review = [
   {
