@@ -1104,8 +1104,9 @@ const list = [
 ],
 "quantity": 1,
 "total_with_quantity": 3.99
-}  
-,
+}       
+  ,
+  ,
 {
   "id": 91,
   "name": "Lobster Burger",
@@ -1121,8 +1122,7 @@ const list = [
   ],
   "quantity": 1,
   "total_with_quantity": 3.99
-}
-          
+}       
 ]
 const review = [
   {
