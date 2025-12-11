@@ -212,7 +212,7 @@ const list = [
   {
     "id": 20,
     "name": "Beef skewers",
-    "image": "https://i.ibb.co/hX9MNXC/beef-skewers.png",
+    "image": "https://i.pinimg.com/1200x/33/23/c4/3323c4dc60d03f54f2490d8fa9bb3d62.jpg",
     "price": "11.99",
     "category": "starters",
     "description": "Savor the smoky goodness of our tender beef skewers, marinated to perfection and grilled to juicy perfection.",
@@ -915,7 +915,7 @@ const list = [
             {
             "id": 80,
             "name": "Lobster Rolls",
-            "image": "https://i.pinimg.com/736x/b5/b9/db/b5b9db550dede3bdb5fa8e08b4a3baba.jpg)",
+            "image": "https://i.pinimg.com/1200x/26/a5/90/26a5909f4745114c5d24ced7a348ab1e.jpg",
             "price": 24.99,
             "category": "meal",
             "description": "Fresh lobster meat served on a toasted, split-top bun with lemon butter.",
@@ -1104,7 +1104,24 @@ const list = [
 ],
 "quantity": 1,
 "total_with_quantity": 3.99
-}       
+}  
+,
+{
+  "id": 91,
+  "name": "Lobster Burger",
+  "image": "https://i.pinimg.com/1200x/0a/0a/0c/0a0a0caba37929e2aaac64a6bb6897de.jpg",
+  "price": 3.99,
+  "category": "meal", 
+  "description": "Juicy lobster patty served on a toasted bun.",
+  "ingredients": [
+    "Lobster patty",
+    "Bun",
+    "Lettuce",
+    "Tomato"
+  ],
+  "quantity": 1,
+  "total_with_quantity": 3.99
+}
           
 ]
 const review = [
